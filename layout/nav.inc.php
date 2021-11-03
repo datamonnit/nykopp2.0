@@ -23,7 +23,7 @@
           <a class="nav-link" href="newpoll.php">Videos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="results.php">Essays & poems</a>
+          <a class="nav-link" href="poems.php">Essays & poems</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="editpoll.php">contacts</a>
