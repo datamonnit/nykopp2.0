@@ -18,11 +18,15 @@
 <fieldset>
     <div class="form-group">
         <label for="username" class="form-label mt-4">username</label>
-        <input name="username" type="username" class="form-control" id="name" placeholder="Enter username"> 
+        <input name="username" type="username" class="form-control" id="username" placeholder="Enter username"> 
+    </div>
+    <div class="form-group">
+        <label for="emailUsers" class="form-label mt-4">email</label>
+        <input name="email" type="email" class="form-control" id="emailUsers" placeholder="Enter email"> 
     </div>
     <div class="form-group">
     <label for="exampleInputPassword1" class="form-label mt-4">password</label>
-    <input type="password" type="password" class="form-control" id="exampleInputpassword1" placeholder="password">
+    <input type="password" type="password" class="form-control" id="password" placeholder="password">
     </div>
     <br>
     <button type="submit" class="btn btn-primary">submit</button>

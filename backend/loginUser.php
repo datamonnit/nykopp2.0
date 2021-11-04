@@ -1,6 +1,4 @@
 <?php 
-
-
 session_start();
 
 if (!isset($_POST['username']) || !isset($_POST('password'))){
@@ -10,7 +8,9 @@ if (!isset($_POST['username']) || !isset($_POST('password'))){
     die();
 }
 $username = $_POST['username'];
+$email = $_POST['emailUsers'];
 $password = $_POST['password'];
+
 
 include_once 'pdo-connect.php';
 
@@ -43,7 +43,6 @@ try{
     }
 
 } catch (PDOException $e) { 
-
     $data = array(
         'error' => 'tapahtui virhe tallennuksessa!!'
     );
