@@ -1,25 +1,24 @@
-<?php 
-session_start();
-if (!isset($_SESSION['user_id'])){
+<?php
+
+if (!isset($_POST['topic']) || !isset($_POST['option1'])){
     $data = array(
-        'error' => 'You are not allowed here'
+        'error' => 'POST_dataa ei saatavilla'
     );
     die();
 }
 
-// Valmistllaan muuttujat
 $post_id = $_POST['post_id'];
-$post_title = $_POST['title'];
+$post_title = $_POST['post_title'];
 $post_date = $_POST['post_date'];
-$post_content = $_SESSION['post_content'];
-$expdate = $_SESSION['expdate'];
+$post_content = $_POST['post_content'];
+$expdate = $_POST['expdate'];
 
-include_once 'pdo-connect.php';
-// Lisätään äänestys kantaan
+// include_once 'pdo-connect.php';
+
 try{
-    // Luodaan pdo-statement
-    $stmt = $conn->prepare("INSERT INTO news (post_id, start, end, user_id) 
-                            VALUES (:post_id, :start, :end, :user_id);");
+
+    $stmt = $conn->prepare("INSERT INTO news (post_id, post_title, post_date, post_content, expdate)
+                            VALUES (:post_id, :post_title, :post_date, :post_content, :expdate);");
     $stmt->bindParam(':post_id', $post_id);
     $stmt->bindParam(':post_title', $post_title);
     $stmt->bindParam(':post_date', $post_date);
@@ -32,21 +31,10 @@ try{
         );
     } else {
         $data = array(
-            'success' => 'Posted'
+
         );
     }
-} catch (PDOException $e) {
-    $data = array(
-        'error' => $e->getMessage()
-    );
+
 }
 
-// jos äänestyksen lisääminen onnistui, niin lisätään myös vaihtoehdot
-
-// Valmistellaan vaihtoehdot array-rakenteeseen
-
-// Haetaan edellisen insertin id
-$poll_id = $conn->lastInsertId();
-
-header("Content-type: application/json;charset=utf-8");
-echo json_encode($data);
+?>

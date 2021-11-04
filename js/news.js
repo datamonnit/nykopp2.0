@@ -1,1 +1,5 @@
-moi
+
+
+function addNews(event){
+
+}

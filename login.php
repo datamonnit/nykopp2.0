@@ -21,6 +21,4 @@
 </form>
 </div>
 
-
-
 <?php include_once 'layout/bottom.inc.php';?>
