@@ -21,12 +21,12 @@
         <input name="username" type="username" class="form-control" id="username" placeholder="Enter username"> 
     </div>
     <div class="form-group">
-        <label for="emailUsers" class="form-label mt-4">email</label>
-        <input name="email" type="email" class="form-control" id="emailUsers" placeholder="Enter email"> 
+        <label for="exampleInputpassword1" class="form-label mt-4">password</label>
+        <input name="password1" type="password" class="form-control" id="password1" placeholder="password"> 
     </div>
     <div class="form-group">
-    <label for="exampleInputPassword1" class="form-label mt-4">password</label>
-    <input type="password" type="password" class="form-control" id="password" placeholder="password">
+    <label for="exampleInputPassword2" class="form-label mt-4">password</label>
+    <input type="password2" type="password" class="form-control" id="password2" placeholder="password again">
     </div>
     <br>
     <button type="submit" class="btn btn-primary">submit</button>
