@@ -35,6 +35,33 @@ try{
         );
     }
 
-}
+    } 
+    catch (PDOException $e) {
+        $data = array(
+            'error' => $e->getMessage()
+        );
+    }
+
+    try{
+
+        $stmt = $conn->prepare("INSERT INTO posts (post_title, post_id) VALUES (:post_content, :post_id)");
+        $stmt->bindParam(':post_content', $post_content);
+        $stmt->bindParam(':post_id', $post_id);
+
+        if($stmt->execute() == false){
+            $data = array(
+                'error' => 'Error'
+            );
+        } else {
+            $data = array(
+                'success' => 'New vote inserted'
+            );
+        }
+        }
+        catch (PDOException $e) {
+        $data = array(
+            'error' => $e->getMessage()
+        );
+    }
 
 ?>
