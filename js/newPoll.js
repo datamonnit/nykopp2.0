@@ -7,9 +7,7 @@ function createNewPoll(event){
     console.log('save new poll');
 
     const otsikko = document.forms['newPoll']['otsikko'].value;
-
     const options = [];
-
     const inputs = document.querySelectorAll('input');
 
     inputs.forEach(function(input){

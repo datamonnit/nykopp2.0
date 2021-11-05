@@ -9,7 +9,6 @@ if (!isset($_SESSION['logged_in'])){
 <?php include_once 'layout/top.inc.php'; ?>
 <?php include_once 'layout/nav.inc.php'; ?>
 
-
 <div class="container">
 
   <div id="msg" class="alert alert-dismissible alert-warning d-none">
@@ -32,12 +31,6 @@ if (!isset($_SESSION['logged_in'])){
           <input name="runo" type="username" class="form-control" placeholder="runo">
         </div>
 
-      <!-- Additional options go here -->
-
-        <!-- <div class="form-group">
-          <label for="formFile" class="form-label mt-4">Default file input example</label>
-          <input class="form-control" type="file" id="formFile">
-        </div> -->
         <h4></h4>
       </fieldset>
       <button type="submit" class="btn btn-primary">Lisää Runo</button>
