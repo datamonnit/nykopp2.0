@@ -41,7 +41,7 @@ try{
             'error' => $e->getMessage()
         );
     }
-
+/*
     try{
 
         $stmt = $conn->prepare("INSERT INTO posts (post_title, post_id) VALUES (:post_content, :post_id)");
@@ -63,5 +63,6 @@ try{
             'error' => $e->getMessage()
         );
     }
+    */
 
 ?>
