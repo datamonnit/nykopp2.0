@@ -1,12 +1,12 @@
 let optionCount = 1;
 
-document.forms['newPoem'].addEventListener('submit', createNewPoem);
+document.forms['poems'].addEventListener('submit', createNewPoem);
 
 function createNewPoem(event){
     event.preventDefault();
     console.log('save new poem');
 
-    const otsikko = document.forms['newPoem']['otsikko'].value;
+    const otsikko = document.forms['poems']['otsikko'].value;
     const options = [];
     const inputs = document.querySelectorAll('input');
 
@@ -38,7 +38,7 @@ function createNewPoem(event){
             showMessage('error',data.error);
         }
     }
-    ajax.open("POST", "backend/CreateNewPoem.php", true);
+    ajax.open("POST", "backend/createNewPoem.php", true);
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");  
     ajax.send(postData);
 }
