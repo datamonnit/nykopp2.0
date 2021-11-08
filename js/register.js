@@ -1,13 +1,12 @@
-document.forms['login'].addEventListener('submit', loginUser);
+document.forms['register'].addEventListener('submit', registerNewUser);
 
-
-function loginUser(event){
+function registerNewUser(event){
     event.preventDefault();
     const username = document.forms['register']['username'].value;
+    const email = document.forms['register']['email'].value;
     const password = document.forms['register']['password'].value;
-    const password2 = document.forms['register']['confirmPassword'].value;
 
-    if (username.length <= 0)
+    if (username.length <= 0)  { 
     showMessage('error', 'username is required');
     return;
 }
@@ -17,7 +16,11 @@ if (password.length <= 4) {
     return;
 }
 
-
+if (email.length <= 0) {
+    showMessage('error', 'email is required');
+    return;
+}
+    }
 let ajax = new XMLHttpRequest();
 ajax.onload = function(){
     const data = JSON.parse(this.responseText); 
@@ -30,5 +33,5 @@ ajax.onload = function(){
     }
     ajax.open("POST", "backend/registerNewUser.php", true);
     ajax.setRequestHeader("content-type", "application/x-www-form-urlencoded");
-    ajax.send(`username=${username}&password=${password}`);
+    ajax.send("username="+username+"&password="+password);
 }

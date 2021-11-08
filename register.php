@@ -21,19 +21,18 @@
         <input name="username" type="username" class="form-control" id="username" placeholder="Enter username"> 
     </div>
     <div class="form-group">
-        <label for="exampleInputpassword1" class="form-label mt-4">password</label>
-        <input name="password1" type="password" class="form-control" id="password1" placeholder="password"> 
+    <label for="email" class="form-label mt-4">email</label>
+    <input type="email" type="email" class="form-control" id="emailUsers" placeholder="emailUsers">
     </div>
     <div class="form-group">
-    <label for="exampleInputPassword2" class="form-label mt-4">password</label>
-    <input type="password2" type="password" class="form-control" id="password2" placeholder="password again">
+        <label for="exampleInputpassword1" class="form-label mt-4">password</label>
+        <input name="password" type="password" class="form-control" id="passwd" placeholder="password"> 
     </div>
-    <br>
     <button type="submit" class="btn btn-primary">submit</button>
 </fieldset>
 </form>
 </div>
 
 
-
+<?php include_once 'backend/registerNewUser.php';?>
 <?php include_once 'layout/bottom.inc.php';?>
