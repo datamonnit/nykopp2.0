@@ -18,7 +18,7 @@ if (!isset($_SESSION['logged_in'])){
   </div>
 
 
-  <form name="newPoll">
+  <form name="newPoem">
       <fieldset>
         <legend>Kirjoita uusi runo</legend>
         <div class="form-group">
@@ -38,7 +38,7 @@ if (!isset($_SESSION['logged_in'])){
 
 </div>
 
-  <script src="js/newPoll.js"></script>
+  <script src="js/newPoem.js"></script>
   <script src="js/common.js"></script>
 
         <?php include_once 'layout/bottom.inc.php'; ?>

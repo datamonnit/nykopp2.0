@@ -1,12 +1,12 @@
 let optionCount = 1;
 
-document.forms['newPoll'].addEventListener('submit', createNewPoll);
+document.forms['newPoem'].addEventListener('submit', createNewPoem);
 
-function createNewPoll(event){
+function createNewPoem(event){
     event.preventDefault();
-    console.log('save new poll');
+    console.log('save new poem');
 
-    const otsikko = document.forms['newPoll']['otsikko'].value;
+    const otsikko = document.forms['newPoem']['otsikko'].value;
     const options = [];
     const inputs = document.querySelectorAll('input');
 
@@ -33,12 +33,12 @@ function createNewPoll(event){
     ajax.onload = function(){
         const data = JSON.parse(this.responseText);
         if (data.hasOwnProperty('success')) {
-            window.location.href = "index.php?type=succes&msg=New poll inserted!";
+            window.location.href = "index.php?type=succes&msg=New poem inserted!";
         } else {
             showMessage('error',data.error);
         }
     }
-    ajax.open("POST", "backend/CreateNewPoll.php", true);
+    ajax.open("POST", "backend/CreateNewPoem.php", true);
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");  
     ajax.send(postData);
 }
