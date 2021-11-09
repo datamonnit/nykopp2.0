@@ -11,30 +11,11 @@ if (!isset($_SESSION['logged_in'])){
 
 <div class="container">
 
-  <div id="msg" class="alert alert-dismissible alert-warning d-none">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <h4 class="alert-heading">Warning!</h4>
-    <p class="mb-0"></a>.</p>
-  </div>
-
-
-  <form name="poems">
-      <fieldset>
-        <legend>Kirjoita uusi runo</legend>
-        <div class="form-group">
-          <label for="otsikko" class="form-label mt-4"></label>
-          <input name="otsikko" type="username" class="form-control" placeholder="otsikko">
-        </div>
-        
-        <div class="form-group">
-          <label for="runo" class="form-label mt-4"></label>
-          <input name="runo" type="username" class="form-control" placeholder="runo">
-        </div>
-
-        <h4></h4>
-      </fieldset>
-      <button type="submit" class="btn btn-primary">Lisää Runo</button>
-    </form>
+    <div id="msg" class="alert alert-dismissible alert-warning d-none">
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      <h4 class="alert-heading">Warning!</h4>
+      <p class="mb-0"></a>.</p>
+    </div>
 
 </div>
 
