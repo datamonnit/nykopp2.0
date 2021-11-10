@@ -14,25 +14,26 @@
 </div>
 
 <div class="container">
-<form name="login">
+<form name="register">
+
+
 <fieldset>
     <div class="form-group">
-        <label for="username" class="form-label mt-4">username</label>
+        <label for="username" class="form-label mt-4">käyttäjänimi/sähköposti</label>
         <input name="username" type="username" class="form-control" id="username" placeholder="Enter username"> 
     </div>
     <div class="form-group">
-    <label for="email" class="form-label mt-4">email</label>
-    <input type="email" type="email" class="form-control" id="emailUsers" placeholder="emailUsers">
+        <label for="exampleInputpassword1" class="form-label mt-4">salasana</label>
+        <input name="password" type="password" class="form-control" id="password" placeholder="password"> 
     </div>
     <div class="form-group">
-        <label for="exampleInputpassword1" class="form-label mt-4">password</label>
-        <input name="password" type="password" class="form-control" id="passwd" placeholder="password"> 
+        <label for="exampleInputpassword2" class="form-label mt-4">salasana uudelleen</label>
+        <input name="password2" type="password" class="form-control" id="password" placeholder="password"> 
     </div>
     <button type="submit" class="btn btn-primary">submit</button>
 </fieldset>
 </form>
 </div>
 
-
-<?php include_once 'backend/registerNewUser.php';?>
+<script src="js/register.js"></script> 
 <?php include_once 'layout/bottom.inc.php';?>
