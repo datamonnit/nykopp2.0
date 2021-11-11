@@ -24,7 +24,7 @@
         document.getElementById("progressBar").style.width="0%";
         document.getElementById("progressBar").classList.add("bg-success");
     }
- 
+
     function uploadFile() {
         const image_files = document.getElementById('customFile').files;
         if(image_files.length) {
