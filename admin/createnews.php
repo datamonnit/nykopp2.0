@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php 
 // if (!isset($_SESSION['logged_in'])){
-//   header('Location: index.php');
+//   header('Location: ../index.php');
 //   die();
 // }
 ?>
