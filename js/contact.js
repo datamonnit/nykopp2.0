@@ -11,3 +11,4 @@ function annaPalaute(event) {
     event.preventDefault();
     console.log(nimi.value, sposti.value, puh.value, palaute.value);
 }
+
