@@ -11,22 +11,23 @@ if (!isset($_POST['username']) || !isset($_POST['password'])){
 }
 $username = $_POST['username'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
+$mail = $_POST['mail'];
 
 include_once 'pdo-connect.php';
 
 
 try {
-    $stmt = $conn->prepare("INSERT INTO users (username, passwd) VALUES (:username, :passwd);");
+    $stmt = $conn->prepare("INSERT INTO users (username, password, mail) VALUES (:username, :password , :mail);");
     $stmt->bindParam(':username', $username);
-    $stmt->bindParam(':passwd', $password);
+    $stmt->bindParam(':password', $password);
+    $stmt->bindParam(':mail', $mail);
     if ($stmt->execute() == false){
      $data = array(
        'error' => 'tapahtui joku virhe tallennuksessa'
      );
     } else {
     $data = array(
--     'success' => 'uusi käyttäjä on tallennettu'
+     'success' => 'uusi käyttäjä on tallennettu'
     );
   }
       } catch (PDOException $e) {
