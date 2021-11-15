@@ -3,14 +3,6 @@
 <?php include_once 'layout/nav.inc.php'; ?>
 <?php
 
-include_once 'pdo-connect.php';
-
-if(!isset($_GET['post_id'])){
-    header('Location : index.php');
-}
-
-$id = intval($_GET['post_id']);
-
 ?>
 <body>
   
