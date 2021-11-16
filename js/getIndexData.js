@@ -28,10 +28,10 @@ function showNews(news){
         // Luodaan li-elementti
         const li = document.createElement('li');
         // Luodaan li:n sisältö -> tieto kannasta
-        // const liText =  document.createTextNode(oneNews.post_title);
+        const liText =  document.createTextNode(oneNews.post_title);
         
         // Lisätään uudet elementit DOMiin
-        // li.appendChild(liText)    
+        li.appendChild(liText)    
         // li.innerHTML = oneNews.post_content
         ul.appendChild(li);
 
