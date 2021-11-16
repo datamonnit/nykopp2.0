@@ -4,6 +4,7 @@
         <div class="card">
             <div class="card-header">File Upload Example With Progressbar - CodeInHouse.com</div>
             <div class="card-body">
+            <input name="topic" type="username" class="form-control" id="name" placeholder="topic">
                 <div class="custom-file">
                     <input type="file" name="image_file" class="custom-file-input" id="customFile" onchange="onSetFilename(this)">
                     <label class="custom-file-label" id="custom-file-label" for="customFile">Choose file</label>
