@@ -1,4 +1,5 @@
 window.addEventListener('load', getNews);
+document.getElementById('votesUl');
 
 let data = null;
 
@@ -7,21 +8,21 @@ function getNews(){
     let ajax = new XMLHttpRequest();
     ajax.onload = function(){
         data = JSON.parse(this.responseText);
-        showPolls(data);
+        showNews(data);
     }
-    ajax.open("GET", "backend/getNews.php?show_all=1");
+    ajax.open("GET", "backend/getNews.php");
     ajax.send();
 }
 
-function showNews(){
+function showNews(news){
 
-    const newLi = document.createElement('li');
-    newLi.classList.add('list-group-item');
-    newLi.dataset.news_id = news.id;
+    console.log(news)
 
-    const liText = document.createTextNode(news.topic);
+    const ul = document.getElementById("votesUl");
+    ul.innerHTML = "";
+
+    //---työmaa alue---//
+
     const liText = document.createTextNode(news.content);
-    const liText = document.createTextNode(news.date);
-    const liText = document.createTextNode(news.expdate);
 
 }

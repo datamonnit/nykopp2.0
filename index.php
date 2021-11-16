@@ -15,5 +15,5 @@
     
 
 </div>
-</body>
+<script src="./js/getIndexData.js"></script>
 <?php include_once 'layout/bottom.inc.php'; ?>
