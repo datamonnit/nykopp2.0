@@ -18,11 +18,27 @@ function showNews(news){
 
     console.log(news)
 
-    const ul = document.getElementById("votesUl");
+    const ul = document.getElementById("newsUl");
     ul.innerHTML = "";
 
-    //---työmaa alue---//
+    news.forEach(oneNews => {
+        if (oneNews.post_title.length <= 0) {
+            return;
+        }
+        // Luodaan li-elementti
+        const li = document.createElement('li');
+        // Luodaan li:n sisältö -> tieto kannasta
+        // const liText =  document.createTextNode(oneNews.post_title);
+        
+        // Lisätään uudet elementit DOMiin
+        // li.appendChild(liText)    
+        // li.innerHTML = oneNews.post_content
+        ul.appendChild(li);
 
-    const liText = document.createTextNode(news.content);
+    });
+
+
+
+    
 
 }
