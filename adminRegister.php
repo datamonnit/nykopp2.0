@@ -24,15 +24,16 @@
             </div>
             <div class="form-group">
                 <label for="email" class="form-label mt-4">sähköposti</label>
-                <input name="email" type="text" class="form-control" id="mail" placeholder="email"> 
+                <input name="email" type="text" class="form-control" id="email" placeholder="email"> 
             </div>
             <button type="submit" name="login" class="btn btn-primary">submit</button>
+            <div class="container">
+            <a href="forgotPassword.php"><p>unohditko salasanan</p></a>
+            </div>
         </fieldset>
     </form>
 </div>
-<div class="container">
-    <a href="resetPassword.php"><p>unohditko salasanan</p></a>
-</div>
+
 
 <script src="js/register.js"></script> 
 <?php include_once 'layout/bottom.inc.php';?>

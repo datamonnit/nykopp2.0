@@ -9,17 +9,17 @@
     <title>resetPassword</title>
 </head>
 <body>
+<h1>Salasanan vaihto</h1>
 
-    <h1>Salasanan vaihto</h1>
-
+<form action="submit_email">
     <div class="form-group">
-        <label for="email" class="form-label mt-4">sähköposti:</label>
-        <input name="email" type="text" class="form-control" id="email" placeholder="email"> 
-        <br>
-        <button type="submit" name="submit_email">lähetä</button>
-    </div>
+    <label for="email" class="form-label mt-4">sähköposti:</label>
+    <input name="email" type="text" class="form-control" id="mail" placeholder="email"> 
+    <br>
+    <button type="submit" name="submit_email">lähetä</button>
+</div>
 
 <?php include_once 'backend/resetRequest.php';?>
-
+    </form>
 </body>
 </html> 
