@@ -27,18 +27,23 @@ function showNews(news){
         }
         // Luodaan li-elementti
         const li = document.createElement('li');
+        const title = document.createElement('h3');
+        const content = document.createElement('p');
+
         // Luodaan li:n sisältö -> tieto kannasta
-        const liText =  document.createTextNode(oneNews.post_title);
+        const titleText =  document.createTextNode(oneNews.post_title);
+
+        // const contentText =  document.createTextNode(oneNews.post_content);
         
         // Lisätään uudet elementit DOMiin
-        li.appendChild(liText)    
+        title.appendChild(titleText)   
+        li.appendChild(title)   
+        content.innerHTML = oneNews.post_content;
+        li.appendChild(content);    
+
         // li.innerHTML = oneNews.post_content
         ul.appendChild(li);
 
     });
-
-
-
-    
 
 }
