@@ -3,7 +3,7 @@
   $data = array();
 
   //tarkistuksia ensin
-  if (!isset($_POST['username']) || !isset($_POST['password']) || !isset($_POST['email'])){
+  if (!isset($_POST['username']) || !isset($_POST['password']) || !isset($_POST['mail'])){
     $data = array(
       'error' => 'POST-dataa ei saatavilla!'
     );
@@ -11,7 +11,7 @@
   }
   $username = $_POST['username'];
   $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-  $mail = $_POST['email'];
+  $mail = $_POST['mail'];
 
   include_once 'pdo-connect.php';
 

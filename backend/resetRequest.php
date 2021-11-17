@@ -1,5 +1,5 @@
 <?php 
-if (!isset($_POST["reset-request-submit"])) {
+if (!isset($_POST["reset-request-submit"]) || !isset($_POST['username']) || !isset($_POST['password']) || !isset($_POST['email']))  {
 
   $selector = bin2hex(random_bytes(8));
   $token = random_bytes(32);
@@ -24,7 +24,6 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
   mysqli_stmt_execute($stmt);
 }
 
-$sql = "INSERT INTO pwdReset (pwdResetEmail, PwdResetSelector, pwdResetToken, pwdResetExpires) VALUES (?, ?, ?, ?);";
 
 $stmt = mysqli_stmt_init($conn);
 if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -36,22 +35,40 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
   mysqli_stmt_execute($stmt);
 }
 
-mysqli_stmt_close($stmt);
+mysqli_stmt_close($stmt); 
 mysqli_close();
 
-$to = $mail;
+try {
+  $stmt = $conn->prepare("INSERT INTO pwdReset (pwdResetEmail, pwdResetSelector, pwdResetToken, pwdResetExpires) VALUES (:pwdResetEmail, :pwdResetSelector, :pwdResetToken, :pwdResetExpires);");
+  $stmt->bindParam(':pwdReset', $pwdReset);
+  $stmt->bindParam(':pwdResetEmail', $pwdResetEmail);
+  $stmt->bindParam(':pwdResetToken', $pwdResetToken);
+  $stmt->bindParam(':pwdResetExpires', $pwdResetExpires);
 
-$subject = 'reset your password for nykopp2';
-
-$message = '<p>We recieved a password reset request. the link to reset your password makes this request, you can ignore this email</p>';
-$message .= '<p> here is your password reset link </br>';
-$message .= '<a href=">' . $url . '">' . $url . '</a></p>';
-
-
-//$headers 
+  if ($stmt->execute() == false){
+  $data = array(
+    'error' => 'tapahtui joku virhe tallennuksessa'
+  );
+  } else {
+  $data = array(
+  'success' => 'uusi käyttäjä on tallennettu'
+  );
+    }
+  }  catch (PDOException $e) {
+if (strpos($e->getMessage(), ' 1062 Duplicate entry')){
+    $data = array(
+    'error' => 'käyttäjä on jo olemassa!'
+  );
+} else {
+$data = array(
+  'error' => 'tuli virhe käyttäjän tallentamisessa!'
+  );  
+  } 
+}   
 
 } else {
   header("location: ../index.php");
+
 }
 
 

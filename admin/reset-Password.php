@@ -13,6 +13,13 @@ session_start();
         <input type="confirmPassword" name="password2" placeholder="enter your password again">
         <br>
         <button type="submit" name="reset-button">send new password</button> 
+        <?php if ('reset-button') == true {
+            echo 'salasana on lähetetty sähköpostiin';
+        } 
+        
+        
+        
+        ?>
     </div>
 </form>
 

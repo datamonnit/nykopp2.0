@@ -1,5 +1,5 @@
-<?php include_once 'layout/top.inc.php';?>
-<?php include_once 'layout/nav.inc.php';?>
+<?php include_once '../layout/top.inc.php';?>
+<?php include_once '../layout/nav.inc.php';?>
 
 
 <head>
@@ -19,7 +19,7 @@
     <button type="submit" name="submit_email">lähetä</button>
 </div>
 
-<?php include_once 'backend/resetRequest.php';?>
+<?php include_once '../backend/resetRequest.php';?>
     </form>
 </body>
 </html> 

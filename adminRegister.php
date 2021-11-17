@@ -24,11 +24,11 @@
             </div>
             <div class="form-group">
                 <label for="email" class="form-label mt-4">sähköposti</label>
-                <input name="email" type="text" class="form-control" id="email" placeholder="email"> 
+                <input name="mail" type="text" class="form-control" id="mail" placeholder="enter your email here"> 
             </div>
-            <button type="submit" name="login" class="btn btn-primary">submit</button>
+            <button type="submit" name="register" class="btn btn-primary">submit</button>
             <div class="container">
-            <a href="forgotPassword.php"><p>unohditko salasanan</p></a>
+            <a href="admin/forgotPassword.php"><p>unohditko salasanan</p></a>
             </div>
         </fieldset>
     </form>
