@@ -16,6 +16,7 @@
 </form>
 
 <script src="js/contact.js"></script>
+<script src="js/common.js"></script>
 
 </div>
 <?php include_once 'layout/bottom.inc.php'; ?>
