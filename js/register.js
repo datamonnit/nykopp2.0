@@ -5,11 +5,11 @@ document.forms['register'].addEventListener('submit', createNewAdmin);
 function createNewAdmin(event){
 
     
-    
+
     const username = document.forms['register']['username'].value;
     const password = document.forms['register']['password'].value;
     const password2 = document.forms['register']['confirmPassword'].value;
-    const mail = document.forms['register']['email'].value;
+    const email = document.forms['register']['email'].value;
 
     if (username.length <= 0)  { 
         showMessage('error', 'username is required');
@@ -22,17 +22,17 @@ function createNewAdmin(event){
     }
 
     if (password.localeCompare(password2) != 0){
-        showMessage(data.error);
+        showMessage('error', 'password not matching!');
         return;
     }
     
-    if (mail.length <= 0) {
+    if (email.length <= 0) {
         showMessage('error', 'email is required');
         return;
     }
 
-
-    console.log('registering new user');
+    
+    event.preventdefault();
 
     let ajax = new XMLHttpRequest();
     ajax.onload = function(){
@@ -42,17 +42,15 @@ function createNewAdmin(event){
             window.location.href = "admin.php?type=success&msg=rekisteröityminen onnistui! voit kirjautua uusilla tunnuksilla!";
             return;
         } else {
-            showMessage(data.error);
+            showMessage('error', data.error);
         }
     }
     ajax.open("POST", "backend/createNewAdmin.php", true);
     ajax.setRequestHeader("content-type", "application/x-www-form-urlencoded");
-    ajax.send("username="+username+"&password="+password+"&mail="+mail);
+    ajax.send("username="+username+"&password="+password+"&email="+email);
+
+    
 }
 
-function showMessage(msg){
-    let msgBox = document.getElementById("msg");
-    msgBox.querySelector('p').innerHTML = msg;
-    msgBox.classList.remove('d-none');
-}
+
 

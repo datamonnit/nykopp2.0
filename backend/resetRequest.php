@@ -1,5 +1,8 @@
 <?php 
-if (!isset($_POST["reset-request-submit"]) || !isset($_POST['username']) || !isset($_POST['password']) || !isset($_POST['email']))  {
+include_once 'pdo-connect.php';
+
+
+if (!isset($_POST['username']) || !isset($_POST['password']) || !isset($_POST['email'])) {
 
   $selector = bin2hex(random_bytes(8));
   $token = random_bytes(32);
@@ -8,11 +11,8 @@ if (!isset($_POST["reset-request-submit"]) || !isset($_POST['username']) || !iss
 
   $expires = date("U") + 1800;
 
-include_once 'pdo-connect.php';
-include_once 'createNewadmin.php';
 
 
-$mail = $_POST["mail"];
 
 $sql = "DELETE FROM pwdReset WHERE pwdResetEmail=?";
 $stmt = mysqli_stmt_init($conn);
@@ -20,7 +20,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
   echo "there was an error";
   exit();
 } else {
-  mysqli_stmt_bind_param($stmt, "s", $mail);
+  mysqli_stmt_bind_param($stmt, "s", $email);
   mysqli_stmt_execute($stmt);
 }
 
@@ -31,7 +31,7 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
   exit();
 } else {
 
-  mysqli_stmt_bind_param($stmt, "ssss", $mail, $selector, $password, $expires);
+  mysqli_stmt_bind_param($stmt, "ssss", $email, $selector, $password, $expires);
   mysqli_stmt_execute($stmt);
 }
 
@@ -39,42 +39,42 @@ mysqli_stmt_close($stmt);
 mysqli_close();
 
 try {
-  $stmt = $conn->prepare("INSERT INTO pwdReset (pwdResetEmail, pwdResetSelector, pwdResetToken, pwdResetExpires) VALUES (:pwdResetEmail, :pwdResetSelector, :pwdResetToken, :pwdResetExpires);");
+  $stmt = $conn->prepare("INSERT INTO pwdReset (pwdResetEmail, pwdResetSelector, pwdResetToken, pwdResetExpires) VALUES 
+  (:pwdResetEmail, :pwdResetSelector, :pwdResetToken, :pwdResetExpires);");
   $stmt->bindParam(':pwdReset', $pwdReset);
   $stmt->bindParam(':pwdResetEmail', $pwdResetEmail);
   $stmt->bindParam(':pwdResetToken', $pwdResetToken);
   $stmt->bindParam(':pwdResetExpires', $pwdResetExpires);
 
   if ($stmt->execute() == false){
-  $data = array(
-    'error' => 'tapahtui joku virhe tallennuksessa'
-  );
-  } else {
-  $data = array(
-  'success' => 'uusi käyttäjä on tallennettu'
-  );
-    }
-  }  catch (PDOException $e) {
-if (strpos($e->getMessage(), ' 1062 Duplicate entry')){
     $data = array(
-    'error' => 'käyttäjä on jo olemassa!'
-  );
-} else {
-$data = array(
-  'error' => 'tuli virhe käyttäjän tallentamisessa!'
-  );  
-  } 
-}   
+      'error' => 'tapahtui joku virhe tallennuksessa'
+    );
+      } else {
+      $data = array(
+      'success' => 'uusi käyttäjä on tallennettu'
+      );
+    }
+      }  catch (PDOException $e) {
+      if (strpos($e->getMessage(), ' 1062 Duplicate entry')){
+        $data = array(
+        'error' => 'käyttäjä on jo olemassa!'
+      );
+      } else {
+      $data = array(
+        'error' => 'tuli virhe käyttäjän tallentamisessa!'
+        );  
+        } 
+    }   
 
 } else {
-  header("location: ../index.php");
-
+  //header("location: ../index.php");
+  
 }
 
 
 
-
-
+//(!isset($_POST["reset-request-submit"])
 
 
 

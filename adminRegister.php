@@ -1,14 +1,15 @@
 <?php include_once 'layout/top.inc.php';?>
 <?php include_once 'layout/nav.inc.php';?>
 
+<div class="container">
 <div id="msg" class="alert alert-dismissible alert-warning d-none">
   <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
   <h4 class="alert-heading">Warning!</h4>
   <p class="mb-0"></a>.</p>
 </div>
 
-<div class="container">
-    <form name="register">
+
+<form name="register">
         <fieldset>
             <div class="form-group">
                 <label for="username" class="form-label mt-4">käyttäjänimi</label>
@@ -20,13 +21,13 @@
             </div>
             <div class="form-group">
                 <label for="password" class="form-label mt-4">salasana uudelleen</label>
-                <input name="confirmPassword" type="password" class="form-control" id="password2" placeholder="password"> 
+                <input name="confirmPassword" type="password" class="form-control" id="confirm" placeholder="password"> 
             </div>
             <div class="form-group">
                 <label for="email" class="form-label mt-4">sähköposti</label>
-                <input name="mail" type="text" class="form-control" id="mail" placeholder="enter your email here"> 
+                <input name="email" type="text" class="form-control" id="email" placeholder="enter your email here"> 
             </div>
-            <button type="submit" name="register" class="btn btn-primary">submit</button>
+            <button type="submit" name="button" class="btn btn-primary">submit</button>
             <div class="container">
             <a href="admin/forgotPassword.php"><p>unohditko salasanan</p></a>
             </div>
@@ -35,5 +36,8 @@
 </div>
 
 
-<script src="js/register.js"></script> 
-<?php include_once 'layout/bottom.inc.php';?>
+
+
+<script src="js/register.js"></script>
+<script src="js/common.js"></script> 
+<?php include_once 'layout/bottom.inc.php'; ?>
