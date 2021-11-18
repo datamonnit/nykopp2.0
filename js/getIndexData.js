@@ -27,6 +27,8 @@ function showNews(news){
         }
         // Luodaan li-elementti
         const li = document.createElement('li');
+        li.classList.add('list-group-item');
+
         const title = document.createElement('h3');
         const content = document.createElement('p');
 
