@@ -2,6 +2,7 @@ function modifyNews(event){
     event.preventDefault();
     console.log('save change');
 
+    // kerää datan
     let newsData = {};
     newsData.id = document.forms['editNews']['id'].value;
     newsData.topic = document.forms['editNews']['topic'].value;
