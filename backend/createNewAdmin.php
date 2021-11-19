@@ -1,5 +1,5 @@
 <?php 
-
+ 
   $data = array();
   //tarkistuksia ensin
   if (!isset($_POST['username']) || !isset($_POST['password']) || !isset($_POST['email'])){
@@ -24,14 +24,14 @@
       if ($stmt->execute() == false){
         $data = array(
         'error' => 'tapahtui joku virhe tallennuksessa'
-    );
+      );
   } else {
       $data = array(
       'success' => 'uusi käyttäjä on tallennettu'
       );
         }
       } catch (PDOException $e) {
-        if (strpos($e->getMessage(), ' 1062 Duplicate entry')){
+        if (strpos($e->getMessage(), '1062 Duplicate entry')){
         $data = array(
         'error' => 'käyttäjä on jo olemassa!'
       );

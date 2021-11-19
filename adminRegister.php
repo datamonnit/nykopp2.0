@@ -11,6 +11,7 @@
 
 <form name="register">
         <fieldset>
+            <legend>register</legend>
             <div class="form-group">
                 <label for="username" class="form-label mt-4">käyttäjänimi</label>
                 <input name="username" type="username" class="form-control" id="username" placeholder="Enter username"> 
@@ -29,7 +30,7 @@
             </div>
             <button type="submit" name="button" class="btn btn-primary">submit</button>
             <div class="container">
-            <a href="admin/forgotPassword.php"><p>unohditko salasanan</p></a>
+            <a href="./forgotPassword.php"><p>unohditko salasanan</p></a>
             </div>
         </fieldset>
     </form>
@@ -40,4 +41,5 @@
 
 <script src="js/register.js"></script>
 <script src="js/common.js"></script> 
+
 <?php include_once 'layout/bottom.inc.php'; ?>

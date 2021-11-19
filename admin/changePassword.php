@@ -14,12 +14,23 @@
 <form action="submit_email">
     <div class="form-group">
     <label for="email" class="form-label mt-4">sähköposti:</label>
-    <input name="email" type="text" class="form-control" id="mail" placeholder="email"> 
+    <input name="email" type="text" class="form-control" id="email" placeholder="email"> 
     <br>
-    <button type="submit" name="submit_email">lähetä</button>
+    <button type="submit" name="submit_email" id="submit_email">lähetä</button>
 </div>
 
+<?php
+if (!isset($_POST['submit_email'])){
+    $stmt = $username->query("SELECT FROM users WHERE email=:email")
+    $email = $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+?>
+
+
 <?php include_once '../backend/resetRequest.php';?>
-    </form>
+<?php include_once '../layout/bottom.inc.php';?>
+
+</form>
 </body>
 </html> 
