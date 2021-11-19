@@ -6,8 +6,8 @@
 //   }
 ?>
 
-<?php include_once 'layout/top.inc.php'; ?>
-<?php include_once 'layout/nav.inc.php'; ?>
+<?php include_once '../layout/top.inc.php'; ?>
+<?php include_once '../layout/nav.inc.php'; ?>
 
 <form name="editNews">
 <fieldset>
@@ -19,9 +19,9 @@
 
     <input name="content" type="text" class="form-control" placeholder="content">
 
-    <input name="start" type="datetime-local" class="form-control">
+    <input name="date" type="datetime-local" class="form-control">
 
-    <input name="end" type="datetime-local" class="form-control">
+    <input name="expdate" type="datetime-local" class="form-control">
 
 </fieldset>
 
@@ -32,3 +32,7 @@
 </div>
 
 </form>
+
+<script src="../js/editNews.js"></script>
+
+<?php include_once '../layout/bottom.inc.php'; ?>
