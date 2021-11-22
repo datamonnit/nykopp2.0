@@ -5,17 +5,17 @@ document.forms['register'].addEventListener('submit', createNewAdmin);
 function createNewAdmin(event){
 
     
+    
 
     const username = document.forms['register']['username'].value;
-    const password = document.forms['register']['password'].value;
+    const password = document.forms['register']['pwd'].value;
     const password2 = document.forms['register']['confirmPassword'].value;
     const email = document.forms['register']['email'].value;
 
     if (username.length <= 0)  { 
         showMessage('error', 'username is required');
         return;
-    }
-
+    } 
     if (password.length <= 4) {
         showMessage('error', 'minimum is 4 characters');
         return;
@@ -31,15 +31,15 @@ function createNewAdmin(event){
         return;
     }
 
+    event.preventDefault();
     
-    event.preventdefault();
 
     let ajax = new XMLHttpRequest();
     ajax.onload = function(){
         const data = JSON.parse(this.responseText); 
+        console.log(data);
         if (data.hasOwnProperty('success')){
-            alert('tallennus onnistui!');
-            window.location.href = "admin.php?type=success&msg=rekisteröityminen onnistui! voit kirjautua uusilla tunnuksilla!";
+            window.location.href = "index.php?type=success&msg=rekisteröityminen onnistui! voit kirjautua uusilla tunnuksilla!";
             return;
         } else {
             showMessage('error', data.error);
