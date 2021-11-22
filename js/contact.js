@@ -9,19 +9,20 @@ document.forms['palaute'].addEventListener('submit', annaPalaute);
 
 function annaPalaute(event) {
     event.preventDefault();
+
+    const name = document.forms['palaute']['name'].value;
+    const email = document.forms['palaute']['email'].value;
+    const number = document.forms['palaute']['number'].value;
+    const feedback = document.forms['palaute']['feedback'].value;
+
     // console.log(nimi.value, sposti.value, puh.value, palaute.value);
 
-    const nimi = document.forms['palaute']['name'].value;
-    const sposti = document.forms['palaute']['email'].value;
-    const puh = document.forms['palaute']['number'].value;
-    const palaute = document.forms['palaute']['feedback'].value;
-
-    if (nimi.length <= 0 || sposti.length <= 0 || puh.length <= 0 || palaute.length <= 0){
+    if (name.length <= 0 || email.length <= 0 || number.length <= 0 || feedback.length <= 0){
         showMessage('error', 'Fill all fields!');
         return; 
     }
 
-    let postData = `nimi=${nimi}&sähköposti=${sposti}&puhelinnumero=${puh}&palaute=${palaute}`;
+    let postData = `name=${name}&email=${email}&number=${number}&feedback=${feedback}`;
 
     // console.log(nimi, sposti, puh, palaute);
     console.log(postData);

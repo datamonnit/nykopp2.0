@@ -1,16 +1,16 @@
 <?php
 include_once '../config.env.php';
 
-$name = $_POST['nimi'];
-$email = $_POST['sposti'];
-$puhn = $_POST['puh'];
+$name = $_POST['name'];
+$email = $_POST['email'];
+$number = $_POST['number'];
 
 $to = $spost;
 $subject = 'feedback';
-$message = $_POST['palaute'];
+$message = $_POST['feedback'];
 $message = wordwrap($message,70) . "\r\n";
 $headers = "From: $email" . "\r\n" .
-"puh: $puhn" . "\r\n" . 
+"puh: $number" . "\r\n" . 
 "T: $name";
 $message = "$message"  .  "$headers" . "\r\n";
 
