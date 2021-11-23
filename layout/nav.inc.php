@@ -28,6 +28,11 @@
         <li class="nav-item">
           <a class="nav-link" href="editpoll.php">contacts</a>
         </li>
+        <?php if (isset($_SESSION['logged_in'])):?>
+        <li class="nav-item">
+          <a class="nav-link" href="admin/editNews.php">Edit news</a>
+        </li>
+        <?php endif; ?>
 
       </ul>
     </div>
