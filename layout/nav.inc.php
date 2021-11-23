@@ -26,7 +26,7 @@
           <a class="nav-link" href="poems.php">Essays & poems</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="editpoll.php">contacts</a>
+          <a class="nav-link" href="contact.php">Contacts</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="adminRegister.php">register</a>
