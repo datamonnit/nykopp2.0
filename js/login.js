@@ -1,19 +1,18 @@
-document.forms['login'].addEventListener('submit', loginUser);
+document.forms['login'].addEventListener('submit', loginAdmin);
 
-function loginUser(event) {
+function loginAdmin(event) {
     event.preventDefault();
-    const username = document.forms['username'].value;
-    const password = document.forms['password'].value;
+    const username = document.forms['login']['username'].value;
+    const password = document.forms['login']['pwd'].value;
 
     if (username.length <= 0){
         showMessage('error', 'username is required');
         return;
     }
-if (password.length <= 4){
-    showMessage('error', 'minimum is 4 characters');
-    return;
-}
-
+    if (password.length <= 4) {
+        showMessage('error','Minimum is 4 characters');
+        return;
+    }
 let ajax = new XMLHttpRequest();
 ajax.onload = function(){
     const data = JSON.parse(this.responseText); 

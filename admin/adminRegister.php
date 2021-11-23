@@ -1,14 +1,8 @@
 <?php include_once '../layout/top.inc.php';?>
 <?php include_once '../layout/nav.inc.php';?>
 <?php include_once '../backend/pdo-connect.php'?>
-<?php include_once '../config.env.php'?>
 
-<div class="container">
-<div id="msg" class="alert alert-dismissible alert-warning d-none">
-  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-  <h4 class="alert-heading">Warning!</h4>
-  <p class="mb-0"></a>.</p>
-</div>
+
 
 
 <form name="register">
@@ -32,8 +26,6 @@
             </div>
                 <button type="submit" name="submit" value="log in" class="btn btn-primary">submit</button>
 
-            <div class="container">
-            <a href="./forgotPassword.php"><p>unohditko salasanan</p></a>
             </div>
         </fieldset>
     </form>

@@ -27,7 +27,7 @@ try {
 
         if (password_verify($password, $result['pwd'])) {
             $data = array(
-                'success' => true;
+                'success' => 'onnistui'
             );
 
             $_SESSION['logged_in'] = true;

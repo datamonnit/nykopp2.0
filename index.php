@@ -14,7 +14,7 @@
         
     </li>
 </ul>
-    
+  
 
 </div>
 <script src="./js/getIndexData.js"></script>
