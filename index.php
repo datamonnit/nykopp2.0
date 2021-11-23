@@ -2,24 +2,20 @@
 <?php include_once 'layout/top.inc.php'; ?>
 <?php include_once 'layout/nav.inc.php'; ?>
 
-<?php include_once 'layout/bottom.inc.php'; ?>
- 
-<?php 
-// if (!isset($_SESSION['logged_in'])){
-//   header('Location: index.php');
-//   die();
-// }
-
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
 <body>
   
-</body>
-</html>
+
+<div class="container">
+
+<ul id="newsUl" class="list-group">
+    <li class="list-group-item" data-voteid="2">
+        <h2>News topic</h2>
+        <p>News-content ....</p>
+        
+    </li>
+</ul>
+    
+
+</div>
+<script src="./js/getIndexData.js"></script>
+<?php include_once 'layout/bottom.inc.php'; ?>

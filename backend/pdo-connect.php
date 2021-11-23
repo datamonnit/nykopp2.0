@@ -1,9 +1,5 @@
 <?php
-// Development
-$servername = "localhost";
-$db_username = "root";
-$db_password = "";
-$db_name = "nykopp2";
+include_once '../config.env.php';
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$db_name;charset=utf8", $db_username, $db_password);
