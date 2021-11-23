@@ -29,7 +29,7 @@
           <a class="nav-link" href="editpoll.php">contacts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="register.php">register</a>
+          <a class="nav-link" href="adminRegister.php">register</a>
         </li>
       </ul>
     </div>
