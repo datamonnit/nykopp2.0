@@ -12,8 +12,10 @@ function uploadImage($array_name, $imageName, $path)
         return (false);
     }
 }
+
+
 if ($_FILES['image']['name'] != '')
 {
     $image = $_FILES['image']['name'];
-    uploadImage('image', $image, 'images/');
+    uploadImage('image', $image, '../upload/poems/');
 }

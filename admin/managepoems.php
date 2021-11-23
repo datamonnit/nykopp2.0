@@ -59,7 +59,7 @@
             };
             xhr.send(formData);
         } else {
-            alert("No image selected");
+            alert("No file selected");
         }
     }
 </script>
