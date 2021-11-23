@@ -30,7 +30,7 @@
                 <label for="email" class="form-label mt-4">sähköposti</label>
                 <input name="email" type="text" class="form-control" id="email" placeholder="enter your email here"> 
             </div>
-            <button type="submit" name="submit" value="log in" class="btn btn-primary">submit</button>
+                <button type="submit" name="submit" value="log in" class="btn btn-primary">submit</button>
 
             <div class="container">
             <a href="./forgotPassword.php"><p>unohditko salasanan</p></a>

@@ -13,6 +13,7 @@
 
 <form action="submit_email">
     <div class="form-group">
+        <h3>laita sähköposti tähän että saat vaihdettua salasanan</h3>
     <label for="email" class="form-label mt-4">sähköposti:</label>
     <input name="email" type="text" class="form-control" id="email" placeholder="email"> 
     <br>
@@ -24,6 +25,8 @@ if (!isset($_POST['submit_email'])){
     $stmt = $username->query("SELECT FROM users WHERE email=:email")
     $email = $stmt->fetch(PDO::FETCH_ASSOC);
 }
+
+
 
 ?>
 

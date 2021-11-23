@@ -12,9 +12,13 @@ session_start();
         <br><br>    
         <input type="confirmPassword" name="password2" placeholder="enter your password again">
         <br>
-        <button type="submit" name="reset-button">send new password</button> 
-     
-        
+        <button type="submit" name="reset-button">send new password</button>    
     </div>
 </form>
 
+<?php 
+
+
+
+
+?>

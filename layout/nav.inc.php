@@ -31,6 +31,9 @@
         <li class="nav-item">
           <a class="nav-link" href="adminRegister.php">register</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.php">login</a>
+        </li>
       </ul>
     </div>
   </div>
