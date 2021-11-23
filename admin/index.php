@@ -1,6 +1,6 @@
 <?php session_start(); ?>
-<?php include_once 'layout/top.inc.php'; ?>
-<?php include_once 'layout/nav.inc.php'; ?>
+<?php include_once '../layout/top.inc.php'; ?>
+<?php include_once '../layout/admin-nav.inc.php'; ?>
 
 <body>
   
@@ -17,5 +17,5 @@
     
 
 </div>
-<script src="./js/getIndexData.js"></script>
-<?php include_once 'layout/bottom.inc.php'; ?>
+<script src="../js/getIndexData.js"></script>
+<?php include_once '../layout/bottom.inc.php'; ?>
