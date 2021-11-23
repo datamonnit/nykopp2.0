@@ -1,7 +1,7 @@
-<?php include_once 'layout/top.inc.php';?>
-<?php include_once 'layout/nav.inc.php';?>
-<?php include_once 'backend/pdo-connect.php'?>
-
+<?php include_once '../layout/top.inc.php';?>
+<?php include_once '../layout/nav.inc.php';?>
+<?php include_once '../backend/pdo-connect.php'?>
+<?php include_once '../config.env.php'?>
 
 <div class="container">
 <div id="msg" class="alert alert-dismissible alert-warning d-none">
@@ -42,7 +42,7 @@
 
 
 
-<script src="js/register.js"></script>
-<script src="js/common.js"></script> 
-
-<?php include_once 'layout/bottom.inc.php'; ?>
+<script src="../js/register.js"></script>
+<script src="../js/common.js"></script> 
+<?php include_once '../backend/createNewadmin.php'; ?>
+<?php include_once '../layout/bottom.inc.php'; ?>
