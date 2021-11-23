@@ -23,7 +23,7 @@
           <a class="nav-link" href="#">Essays & poems</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">News</a>
+          <a class="nav-link" href="manageNews.php">News</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="adminRegister.php">Users</a>
