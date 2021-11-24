@@ -1,37 +1,36 @@
 //Salasanan resetointi javascript
-document.forms['manageAccounts'].addEventListener('manageAccounts', showAdmins);
 
+window.addEventListener('load', getAdmins);
 
-function showAdmins(event){
- event.preventDefault();
- const id = document.forms['manageAccounts']['id'].value;
- const username = document.forms['manageAccounts']['username'].value;
- const email = document.forms['manageAccounts']['email'].value;
- 
-
-if (username.length <= 0)  {
-    showMessage('error', 'username is required');
+function getAdmins(){ 
+ console.log('haetaan data');
+ let ajax = new XMLHttpRequest();
+ ajax.onload = function(){
+     const data = JSON.parse(this.responseText);
+     showAdmins(data);
+ }
+ ajax.open("GET", "../admin/manageAdmin.php");
+ ajax.send();
 }
-if (email.length <= 0) {
-    showMessage('error', 'email is required');
-}
+  function showAdmins(data){
+
+    const ul = document.getElementById("adminUl");
+
+      data.forEach(users => {
+        const newLi = document.createElement('li');
+        newLi.classList.add('list-group-item');
+
+        const liText = document.createTextNode(users.username);
+        newLi.appendChild(liText);
+
+        ul.appendChild(newLi);
+
+        /*
+        <li class="list-group-item">
+            käyttäjänimi
+        </li>
+        */
 
 
-let ajax = new XMLHttpRequest();
-    ajax.onload = function(){
-        const data = JSON.parse(this.responseText); 
-        console.log('haetaan data');
-        if (data.hasOwnProperty('success')){
-            window.location.href = "index.php?type=success&msg=";
-            return;
-        } else {
-            showMessage('error', 'kirjautuminen epäonnistui');
-        }
-
-    }
-    ajax.open("GET", "backend/showAdmin.php", true);
-    ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlendcoded');
-    ajax.send(postData);
-    
-}
-  
+      });
+  }
