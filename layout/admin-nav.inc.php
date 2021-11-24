@@ -20,7 +20,7 @@
           <a class="nav-link" href="#">Videos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Essays & poems</a>
+          <a class="nav-link" href="./managepoems.php">Essays & poems</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">News</a>
