@@ -1,11 +1,13 @@
 <?php
-session_start();
 
-if (isset($_POST['username']) || isset($_POST['password'])) {
+header("Content-Type: application/json;charset=UTF-8");
+
+if (!isset($_POST['username']) || !isset($_POST['password'])) {
     $data = array(
         'error' => 'POST_dataa ei saatavilla'
     ); 
-    header('Location: ../index.php');
+    echo json_encode($data);
+    die();
 }
 
 $username = $_POST['username'];
@@ -23,16 +25,16 @@ try {
             'error' => 'tapahtui virhe tallennuksessa'
         );
     } else {
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if (password_verify($password, $result['pwd'])) {
             $data = array(
                 'success' => 'onnistui'
             );
+        
 
-            $_SESSION['logged_in'] = true;
-            $_SESSION['user_id'] = $result['id'];
             $_SESSION['username'] = $result['username'];
+            $_SESSION['password'] = $result['pwd'];
         } else {
             $data = array(
                 'error' => 'salasana on väärä!'
@@ -45,6 +47,6 @@ try {
     'error' => 'tapahtui virhe tallennuksessa'
     );
 }
-header("Content-Type: application/json;charset=UTF-8");
+
 echo json_encode($data);
 ?>

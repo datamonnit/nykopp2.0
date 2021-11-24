@@ -8,9 +8,6 @@ function showAdmins(event){
  const username = document.forms['manageAccounts']['username'].value;
  const email = document.forms['manageAccounts']['email'].value;
  
- if (id === undefined) {
-     showMessage('error', 'id is required');
- }
 
 if (username.length <= 0)  {
     showMessage('error', 'username is required');
