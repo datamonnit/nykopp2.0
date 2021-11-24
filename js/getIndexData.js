@@ -1,5 +1,5 @@
 window.addEventListener('load', getNews);
-document.getElementById('votesUl');
+document.getElementById('newsUl');
 
 let data = null;
 
@@ -10,7 +10,15 @@ function getNews(){
         data = JSON.parse(this.responseText);
         showNews(data);
     }
-    ajax.open("GET", "backend/getNews.php");
+
+    let backendPath = ""
+    if (window.location.href.indexOf('admin') > 0){
+        backendPath = "../backend/getNews.php"
+    } else {
+        backendPath = "backend/getNews.php"
+    }
+
+    ajax.open("GET", backendPath);
     ajax.send();
 }
 

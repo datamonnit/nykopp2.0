@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php include_once '../layout/top.inc.php'; ?>
+<?php include_once '../layout/nav.inc.php'; ?>
 
 <?php
 
@@ -24,18 +25,10 @@ TODO:
 
 ?>
 
-<form name="editNews">
+    <ul id="newsUl" class="list-group">
+        <li class="list-group">
 
-    <fieldset>
+        </li>
+    </ul>
 
-    <div class="form-group">
-          <input type="hidden" name ="id">
-          <label for="topic">Topic</label>
-          <input name="topic" type="username" class="form-control" placeholder="topic">
-        </div>
-
-    </fieldset>
-
-</form>
-
-<script src="js/editPoll.js"></script>
+<script src="../js/getIndexData.js"></script>
