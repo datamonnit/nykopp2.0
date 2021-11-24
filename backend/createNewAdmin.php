@@ -16,8 +16,6 @@
 
   include_once 'pdo-connect.php';
 
-
-
   try {
       $stmt = $conn->prepare("INSERT INTO users (username, pwd, email) VALUES (:username, :pwd, :email);");
       $stmt->bindParam(':username', $username);

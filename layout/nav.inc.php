@@ -29,7 +29,10 @@
           <a class="nav-link" href="contact.php">Contacts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="adminRegister.php">register</a>
+          <a class="nav-link" href="adminLogin.php">admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin/manageAdmin.php">manage admins</a>
         </li>
       </ul>
     </div>

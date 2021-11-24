@@ -1,14 +1,8 @@
-<?php include_once 'layout/top.inc.php';?>
-<?php include_once 'layout/nav.inc.php';?>
-<?php include_once 'backend/pdo-connect.php'?>
+<?php include_once '../layout/top.inc.php';?>
+<?php include_once '../layout/nav.inc.php';?>
+<?php include_once '../backend/pdo-connect.php'?>
 
 
-<div class="container">
-<div id="msg" class="alert alert-dismissible alert-warning d-none">
-  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-  <h4 class="alert-heading">Warning!</h4>
-  <p class="mb-0"></a>.</p>
-</div>
 
 
 <form name="register">
@@ -30,10 +24,8 @@
                 <label for="email" class="form-label mt-4">sähköposti</label>
                 <input name="email" type="text" class="form-control" id="email" placeholder="enter your email here"> 
             </div>
-            <button type="submit" name="submit" value="log in" class="btn btn-primary">submit</button>
+                <button type="submit" name="submit" value="log in" class="btn btn-primary">submit</button>
 
-            <div class="container">
-            <a href="./forgotPassword.php"><p>unohditko salasanan</p></a>
             </div>
         </fieldset>
     </form>
@@ -42,7 +34,7 @@
 
 
 
-<script src="js/register.js"></script>
-<script src="js/common.js"></script> 
-
-<?php include_once 'layout/bottom.inc.php'; ?>
+<script src="../js/register.js"></script>
+<script src="../js/common.js"></script> 
+<?php include_once '../backend/createNewadmin.php'; ?>
+<?php include_once '../layout/bottom.inc.php'; ?>

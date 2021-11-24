@@ -3,9 +3,8 @@
 document.forms['register'].addEventListener('submit', createNewAdmin);
 
 function createNewAdmin(event){
-
     
-    
+    event.preventDefault();
 
     const username = document.forms['register']['username'].value;
     const password = document.forms['register']['pwd'].value;
@@ -29,10 +28,7 @@ function createNewAdmin(event){
     if (email.length <= 0) {
         showMessage('error', 'email is required');
         return;
-    }
-
-    event.preventDefault();
-    
+    }  
 
     let ajax = new XMLHttpRequest();
     ajax.onload = function(){
@@ -45,7 +41,7 @@ function createNewAdmin(event){
             showMessage('error', data.error);
         }
     }
-    ajax.open("POST", "backend/createNewAdmin.php", true);
+    ajax.open("POST", "../backend/createNewAdmin.php", true);
     ajax.setRequestHeader("content-type", "application/x-www-form-urlencoded");
     ajax.send("username="+username+"&password="+password+"&email="+email);
 
