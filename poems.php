@@ -22,4 +22,4 @@ if (!isset($_SESSION['logged_in'])){
   <script src="js/poems.js"></script>
   <script src="js/common.js"></script>
 
-        <?php include_once 'layout/bottom.inc.php'; ?>
+  <?php include_once 'layout/bottom.inc.php'; ?>

@@ -23,7 +23,7 @@
           <a class="nav-link" href="#">Essays & poems</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">News</a>
+          <a class="nav-link" href="manageNews.php">News</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="adminRegister.php">Users</a>
@@ -32,3 +32,11 @@
     </div>
   </div>
 </nav>
+
+<div class="container">
+  <div id="msg" class="alert alert-dismissible alert-warning d-none">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <h4 class="alert-heading"></h4>
+    <p class="mb-0"></p>
+  </div>
+</div>
