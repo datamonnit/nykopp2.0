@@ -44,12 +44,22 @@ function showNews(news){
         const titleText =  document.createTextNode(oneNews.post_title);
 
         // const contentText =  document.createTextNode(oneNews.post_content);
+        const btn = document.createElement('button');
+
+        if (window.location.href.indexOf('admin') > 0){
+
+            const btn = document.createElement('button');
+ 
+         } else {
+             
+         }
         
         // Lisätään uudet elementit DOMiin
         title.appendChild(titleText)   
         li.appendChild(title)   
         content.innerHTML = oneNews.post_content;
         li.appendChild(content);    
+        li.appendChild(btn);    
 
         // li.innerHTML = oneNews.post_content
         ul.appendChild(li);
