@@ -1,5 +1,5 @@
 //Salasanan resetointi javascript
-document.forms['login'].addEventListener('login', showAdmins);
+document.forms['manageAccounts'].addEventListener('manageAccounts', showAdmins);
 
 
 function showAdmins(event){

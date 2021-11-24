@@ -1,10 +1,11 @@
 <?php 
-session_start(); 
- include_once '../layout/top.inc.php';
- include_once '../layout/nav.inc.php';
-if (isset($_SESSION['logged_in'])) {
-    header('Location: index.php');
+include_once '../layout/top.inc.php';
+
+if (!isset($_SESSION['logged_in'])) {
+    header('Location: ../index.php');
 }
+
+include_once '../layout/nav.inc.php';
 include_once '../layout/bottom.inc.php';
 ?>
 
@@ -18,7 +19,7 @@ include_once '../layout/bottom.inc.php';
 </head>
 <body>
 <div class="form-group">
-<form name="manageAccounts">    
+<form name="manageAdmins">    
     <fieldset>
     <label for="id" name="id" class="form-label mt-4">käyttäjäid</label>
     
@@ -28,8 +29,6 @@ include_once '../layout/bottom.inc.php';
     
     <label for="email" name="email" class="form-label mt-4">sähköposti</label>
    
-
-
 
     </fieldset>
     <li class="nav-item">

@@ -1,15 +1,18 @@
 <?php 
-session_start();
-if (!isset($_GET['id'])){
-header('Location: ../index.php');
-}
 
-include_once 'pdo-connect.php';
+//  if (!isset($_GET['username']) || !isset($_GET['password'])){
+//  header('Location: ../index.php');
+//  }
+
+
 
   $id = $_GET['id'];
   $username = $_GET['username'];
   $email = $_GET['email'];
 
+  include_once 'pdo-connect.php';
+
+  
 try {
  $stmt = $conn->prepare("SELECT id, username, email FROM users WHERE username = :username");
  $stmt->bindParam(':id', $id);

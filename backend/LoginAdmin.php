@@ -31,8 +31,7 @@ try {
             $data = array(
                 'success' => 'onnistui'
             );
-        
-
+            $_SESSION['logged_in'] = true;
             $_SESSION['username'] = $result['username'];
             $_SESSION['password'] = $result['pwd'];
         } else {
