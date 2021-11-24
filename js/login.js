@@ -1,3 +1,4 @@
+console.log('login.js');
 document.forms['login'].addEventListener('submit', loginAdmin);
 
 function loginAdmin(event) {
