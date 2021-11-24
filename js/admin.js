@@ -1,5 +1,6 @@
 //Salasanan resetointi javascript
-document.forms['showAdmins'].addEventListener('showAdmins', showAdmins);
+document.forms['login'].addEventListener('login', showAdmins);
+
 
 function showAdmins(event){
  event.preventDefault();
@@ -7,6 +8,18 @@ function showAdmins(event){
  const username = document.forms['manageAccounts']['username'].value;
  const email = document.forms['manageAccounts']['email'].value;
  
+ if (id === undefined) {
+     showMessage('error', 'id is required');
+ }
+
+if (username.length <= 0)  {
+    showMessage('error', 'username is required');
+}
+if (email.length <= 0) {
+    showMessage('error', 'email is required');
+}
+
+
 let ajax = new XMLHttpRequest();
     ajax.onload = function(){
         const data = JSON.parse(this.responseText); 

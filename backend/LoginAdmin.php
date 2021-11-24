@@ -5,7 +5,7 @@ if (isset($_POST['username']) || isset($_POST['password'])) {
     $data = array(
         'error' => 'POST_dataa ei saatavilla'
     ); 
-  die();
+    header('Location: ../index.php');
 }
 
 $username = $_POST['username'];
@@ -23,7 +23,7 @@ try {
             'error' => 'tapahtui virhe tallennuksessa'
         );
     } else {
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         if (password_verify($password, $result['pwd'])) {
             $data = array(

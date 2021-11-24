@@ -27,7 +27,7 @@ include_once '../layout/bottom.inc.php';
 
     
     <label for="email" name="email" class="form-label mt-4">sähköposti</label>
-    <?php function showadmins(){}  ?>
+   
 
 
 
