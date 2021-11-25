@@ -18,16 +18,20 @@ include_once '../layout/bottom.inc.php';
                 <!-- Admin-lista kannasta -->
                 
                 <li id="adminUl" class="list-group-item">
-
-                    tuomas <button id="deleteLastAdmin" class="btn btn-danger">delete admin</button>
-
-                </li>
                 <li class="list-group-item">
-                    käyttäjänimi
-                </li>
                     
+                    </li>
+                    <li class="list-group-item">
+                    
+                    </li> 
+                    <li class="list-group-item">
+                    
+                </li>  
                 <li class="list-group-item">
-                </li>   
+                    
+                    </li>
+                </li>
+                
             </ul>
         </div>
         <a href="adminRegister.php" class="btn btn-primary">Create new admin user</a>

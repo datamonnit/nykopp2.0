@@ -9,7 +9,7 @@ try {
 
 if($stmt->execute() == false) {
     $data = array(
-        'error' => 'Error'
+        'error' => 'Error occured'
     );
 
 } else {
