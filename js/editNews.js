@@ -1,6 +1,3 @@
-
-
-
 function getNewsData(id){
     console.log(id);
     let ajax = new XMLHttpRequest();
@@ -40,4 +37,3 @@ function modifyNews(event){
     ajax.send(JSON.stringify(newsData));
 
 }
-
