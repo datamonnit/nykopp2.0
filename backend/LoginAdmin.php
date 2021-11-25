@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 header("Content-Type: application/json;charset=UTF-8");
 
 if (!isset($_POST['username']) || !isset($_POST['password'])) {
@@ -31,8 +31,7 @@ try {
             $data = array(
                 'success' => 'onnistui'
             );
-        
-
+            $_SESSION['logged_in'] = true;
             $_SESSION['username'] = $result['username'];
             $_SESSION['password'] = $result['pwd'];
         } else {

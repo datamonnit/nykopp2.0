@@ -26,7 +26,7 @@
           <a class="nav-link" href="manageNews.php">News</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="adminRegister.php">Users</a>
+          <a class="nav-link" href="manageAdmin.php">Users</a>
         </li>
       </ul>
     </div>
