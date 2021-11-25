@@ -38,7 +38,7 @@
 
 <div class="container">
   <div id="msg" class="alert alert-dismissible alert-warning d-none">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <!-- <button type="button" class="btn-close" data-bs-dismiss="alert"></button> -->
     <h4 class="alert-heading"></h4>
     <p class="mb-0"></p>
   </div>

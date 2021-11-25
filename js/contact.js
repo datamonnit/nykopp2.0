@@ -25,13 +25,13 @@ function annaPalaute(event) {
     let postData = `name=${name}&email=${email}&number=${number}&feedback=${feedback}`;
 
     // console.log(nimi, sposti, puh, palaute);
-    console.log(postData);
+    // console.log(postData);
 
     let ajax = new XMLHttpRequest();
     ajax.onload = function(){
         const data = JSON.parse(this.responseText);
         if (data.hasOwnProperty('success')) {
-            window.location.href = "index.php?type=success&msg=Feedback sent!";
+            window.location.href = "contact.php?type=success&msg=Feedback sent!";
         } else {
             showMessage('error', data.error);
         }
@@ -40,4 +40,3 @@ function annaPalaute(event) {
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajax.send(postData);
 }
-
