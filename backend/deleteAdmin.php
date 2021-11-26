@@ -1,17 +1,16 @@
 <?php 
-// if (!isset($_GET['id'])){
-//     header('location ../index.php');
-// }
 
+ if (!isset($_GET['id'])){
+     header('location: ../index.php');
+ }
 
-$user_Id = $_GET['id'];
-
+$userId = $_GET['id'];
 
 include_once 'pdo-connect.php';
 
 
 try {
-    $stmt = $conn->prepare("DELETE FROM users WHERE user_id = :userId;");
+    $stmt = $conn->prepare("DELETE FROM users WHERE id = :userId;");
     $stmt->bindParam(':userId', $userId);
 
     if ($stmt->execute() == false){
