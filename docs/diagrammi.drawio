@@ -1,1 +1,148 @@
-<mxfile host="Electron" modified="2021-10-22T06:27:24.185Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/13.6.2 Chrome/83.0.4103.122 Electron/9.2.0 Safari/537.36" etag="w98umMRXr9RUgN8FB3WJ" version="13.6.2" type="device"><diagram id="ksLDnj11jvBSVgich1BF" name="Page-1">3Vtdd6MoGP41uWyOip+XadrOzmxnt6c9e3a6dzTSSGIko5iP+fWLEROFpDU2itPeCC+I5eF5P3ghAzBebL7EcBl8Jz4KB4bmbwbgZmAYuuba7JFJtrnE1bhgGmOfdzoInvAvVLzJpSn2UVLpSAkJKV5WhRMSRWhCKzIYx2Rd7fZKwupXl3CKJMHTBIay9F/s04DPwnAO8j8QngbFl3Xby1sWsOjMZ5IE0CfrkgjcDsA4JoTmpcVmjMIMvAKX/L27E637fyxGEa3zQvLPzRX5Gfx9Hb5Go+f14/xx9Xhl5KOsYJjyCf85GIPByNxSmhdm+YPPgW4LYNh0llkxXYSjCSXxAFyvUEwxg+4evqDwgSSYYhKxLi+EUrIodRiFeJo1ULJk0oAuQlbRWZGkNMQRGu8XU2NCeaJ87tlwaFMS8Yl/QWSBaLxlXXirydeAkxAUa7I+LKleMC4oL6fDhZDTaLof+oA0K3CwzwAeSMA/s5d2UC/xJ4beqQ293Rb0pgS9hHBM0shHPkdhHWCKnpZwkrWumZ2rIncBkPaT5SjtUSuhZNuOjJID2kLJki0DpAkhmQGGzCZTCiXY2LDMLqNOIDMBGFpVrT4Cmm4coZbbFmaGDNpfuQ7PEWLyNKU4QZSVZjD7/gxGcxIwOHfCXoFpWMrBdGQGpmlEUbjDcpEmGM/nuG8stI4ZuG6BcyXg7nMWBqjw6oVn0RLeMs+e1/aSJLR3kJpANaSWLXMRxzOY0nTBnGakFDBgCS5WuR20dQkuGaHIH2XxOatFJEJVVNAG0x+l8nPmiYdA+OONNxvup3eVbanygGLMZoTiQhax2f0oV/KBraJ6GGpXK8Y6uUgJSeMJegMJHuZRGE8RrUEw5Fe2I/Kal9bUOrKkhSxGIaR4Vd3EHFtn/oUHgiN6oJQhUkoMxvKJ87fKmw5xIEcYSORcjow00I52+2k3Z6Ije+QzmdiQMgWDr7ShpjkVGuuudTZzmzPQrMvAXhHQ0qq82XvVcwlousJAXRNQ9hwKCAh+AwIWYcunZ6BoS9tmoBxHK2CgLTDQ7iMDnU/KQMEJ21q3DHTlZFdDBmZUMiyBhq77HhGzmhQLthNiNmepUZel/fLUpsDS/W7kbJYKMSfomqVHts04qW6X75YEJxRmyZt5ulK8UbYF5G3lKRvXkyD8npL5fAfYNqBom1CMKJn1Czj1G2ZPO4t7/ch9iTC6ytM03ofzDh8MdbShq5kVh6I5XcbaRRrhXSfi9izYNgSNbOpELDHf0LET8QzFDKyGM29zrwueeb3imRgJeyI9avNMIKwrErZtnl0spL4Az3TVLCvcZ09YJm7cXK8py4SQ2DVbYxlcvf787+6bOV5/tWC6vb3/9c2+kt2pHJUsigDPDhmK1y8xK02z0u6w8+MhihSPHOHS6bMkQd9dt8MQ5Siksn84A9LSgbFiYAHoG7AfNYhHLci7duutNa556KPKSgFdWELxrlNdKwWEyyuumKdq2UrVuM9T0xUOHcutukPPeNchHksuXZBMxaXHfpPJFO1BU5cnZsu7dnnyeWECQ5jACEY7lBJEs09jpdZXFxO6yq3vxU659LL+6TWDUbbNBtUjLqA3Td2eq7S1I9fTdFPmAU5dHDlbacVMpKj9LSutfMIVns6eiUFVnEYXSEheVJ8t11Ksz3IuvFN9Lutyjc1ltzrrKNVZwdE6YrBVO2oTHK0thn8t66x8VDCHFE1JjAn2sxt1op7uVXqbDIxxtsiZRmf3kWd5TjzbNKWJUkU2PLOqyI5qx1wE+ZeIjq1mvtkwjWpKvGlGvFs195SquZjHbnz2b7Sl5qx6+PFS3v3wEzBw+z8=</diagram></mxfile>
+<mxfile host="65bd71144e">
+    <diagram id="ksLDnj11jvBSVgich1BF" name="Page-1">
+        <mxGraphModel dx="719" dy="479" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-2" value="Käyttäjä" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="320" width="110" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-3" value="Ylläpitäjä" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="720" width="110" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="240" width="667" height="730" as="geometry"/>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-5" value="Katsoo taidetta" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="270" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-25" value="Näkee uutiset ja ajankohtaiset" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="250" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-27" value="Kuuntelee musiikkia" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="414" y="490" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-28" value="Lähettää sähköpostia" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="430" width="136" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" style="edgeStyle=none;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="sUD-oqhOBlfnAYwRkRvR-56" target="2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-56" value="Kirjautuminen" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="740" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-61" value="" style="endArrow=none;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="sUD-oqhOBlfnAYwRkRvR-3" target="sUD-oqhOBlfnAYwRkRvR-56" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="250" y="760" as="sourcePoint"/>
+                        <mxPoint x="270" y="780" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-75" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=-0.007;exitY=0.185;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="sUD-oqhOBlfnAYwRkRvR-4" target="sUD-oqhOBlfnAYwRkRvR-5" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="500" y="520" as="sourcePoint"/>
+                        <mxPoint x="480" y="580" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-76" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=-0.003;exitY=0.185;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="sUD-oqhOBlfnAYwRkRvR-4" target="sUD-oqhOBlfnAYwRkRvR-28" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="500" y="520" as="sourcePoint"/>
+                        <mxPoint x="480" y="560" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-77" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=-0.006;exitY=0.186;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="sUD-oqhOBlfnAYwRkRvR-4" target="sUD-oqhOBlfnAYwRkRvR-27" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="500" y="520" as="sourcePoint"/>
+                        <mxPoint x="470" y="600" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-83" value="" style="endArrow=none;html=1;entryX=-0.025;entryY=0.588;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="sUD-oqhOBlfnAYwRkRvR-2" target="sUD-oqhOBlfnAYwRkRvR-25" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="350" as="sourcePoint"/>
+                        <mxPoint x="450" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-88" value="Lisää/poistaa kuvia" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="600" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-89" value="Muokkaa yhteystietoja" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="710" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-90" value="Lisää/poistaa musiikkia" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="830" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-91" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="sUD-oqhOBlfnAYwRkRvR-88" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="446" y="750" as="sourcePoint"/>
+                        <mxPoint x="570" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-92" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="sUD-oqhOBlfnAYwRkRvR-56" target="sUD-oqhOBlfnAYwRkRvR-89" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="470" y="900" as="sourcePoint"/>
+                        <mxPoint x="520" y="850" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="sUD-oqhOBlfnAYwRkRvR-93" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="1" source="sUD-oqhOBlfnAYwRkRvR-56" target="sUD-oqhOBlfnAYwRkRvR-90" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="500" y="890" as="sourcePoint"/>
+                        <mxPoint x="550" y="840" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="avfqZFJ4CwI5auyELzJ6-1" value="Lisää/muokkaa&lt;br&gt;uutisia" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="880" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="avfqZFJ4CwI5auyELzJ6-2" value="Lisää/muokkaa&lt;br&gt;ajankohtaisia" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="880" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="avfqZFJ4CwI5auyELzJ6-3" value="" style="endArrow=none;html=1;" parent="1" source="avfqZFJ4CwI5auyELzJ6-2" target="sUD-oqhOBlfnAYwRkRvR-56" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="310" y="870" as="sourcePoint"/>
+                        <mxPoint x="360" y="820" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="avfqZFJ4CwI5auyELzJ6-4" value="" style="endArrow=none;html=1;entryX=0.758;entryY=0.925;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="avfqZFJ4CwI5auyELzJ6-1" target="sUD-oqhOBlfnAYwRkRvR-56" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="430" y="890" as="sourcePoint"/>
+                        <mxPoint x="480" y="840" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="avfqZFJ4CwI5auyELzJ6-5" value="salasanan resetointi" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="670" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="avfqZFJ4CwI5auyELzJ6-6" value="" style="endArrow=none;html=1;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0.033;exitY=0.313;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="sUD-oqhOBlfnAYwRkRvR-56" target="avfqZFJ4CwI5auyELzJ6-5" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="350" y="740" as="sourcePoint"/>
+                        <mxPoint x="400" y="690" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="avfqZFJ4CwI5auyELzJ6-7" value="lisää/poistaa&lt;br&gt;runoja" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="570" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="avfqZFJ4CwI5auyELzJ6-8" value="" style="endArrow=none;html=1;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;" parent="1" source="sUD-oqhOBlfnAYwRkRvR-56" target="avfqZFJ4CwI5auyELzJ6-7" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="330" y="720" as="sourcePoint"/>
+                        <mxPoint x="380" y="670" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="avfqZFJ4CwI5auyELzJ6-9" value="kategorioiden&lt;br&gt;lisäys, poisto ja muokkaus" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="600" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="avfqZFJ4CwI5auyELzJ6-10" value="" style="endArrow=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="sUD-oqhOBlfnAYwRkRvR-56" target="avfqZFJ4CwI5auyELzJ6-9" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="370" y="720" as="sourcePoint"/>
+                        <mxPoint x="420" y="670" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="Käyttäjien lisääminen / poistaminen" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="840" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.3333333333333333;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="4" target="sUD-oqhOBlfnAYwRkRvR-2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Katsoo taidetta" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="595" y="330" width="110" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

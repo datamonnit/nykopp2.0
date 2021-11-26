@@ -8,31 +8,25 @@
     <div class="collapse navbar-collapse" id="navbarColor03">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="index.php">Home
+          <a class="nav-link active" href="index.php">Admin index
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="logout.php">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.php">Music</a>
+          <a class="nav-link" href="#">Music</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="newpoll.php">Videos</a>
+          <a class="nav-link" href="#">Videos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="poems.php">Essays & poems</a>
+          <a class="nav-link" href="./managepoems.php">Essays & poems</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contacts</a>
+          <a class="nav-link" href="manageNews.php">News</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="adminLogin.php">admin</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="admin/manageAdmin.php">manage admins</a>
+          <a class="nav-link" href="manageAdmin.php">Users</a>
         </li>
       </ul>
     </div>
@@ -41,7 +35,7 @@
 
 <div class="container">
   <div id="msg" class="alert alert-dismissible alert-warning d-none">
-    <!-- <button type="button" class="btn-close" data-bs-dismiss="alert"></button> -->
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     <h4 class="alert-heading"></h4>
     <p class="mb-0"></p>
   </div>
