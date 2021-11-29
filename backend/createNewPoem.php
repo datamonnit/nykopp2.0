@@ -54,21 +54,17 @@ if (!isset($_POST['topic']) || !isset($_POST['option1'])){
 }
 
 // Valmistllaan muuttujat
-$topic = $_POST['topic'];
-$start = $_POST['start'];
-$end = $_POST['end'];
-$user_id = $_SESSION['user_id'];
+$poem_title = $_POST['poem_title'];
+$poem_file = $_POST['poem_file'];
 
 include_once 'pdo-connect.php';
 // Lisätään äänestys kantaan
 try{
     // Luodaan pdo-statement
-    $stmt = $conn->prepare("INSERT INTO poem (topic, start, end, user_id) 
-                            VALUES (:topic, :start, :end, :user_id);");
-    $stmt->bindParam(':topic', $topic);
-    $stmt->bindParam(':start', $start);
-    $stmt->bindParam(':end', $end);
-    $stmt->bindParam(':user_id', $user_id);
+    $stmt = $conn->prepare("INSERT INTO poem (poem_title, poem_file) 
+                            VALUES (:poem_title, :poem_file);");
+    $stmt->bindParam(':poem_title', $poem_title);
+    $stmt->bindParam(':poem_file', $poem_file);
 
     if($stmt->execute() == false){
         $data = array(
