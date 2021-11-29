@@ -7,13 +7,12 @@
 
 <div class="container">
 
-<ul id="newsUl" class="list-group">
-    <li class="list-group-item" data-voteid="2">
-        <h2>News topic</h2>
-        <p>News-content ....</p>     
-    </li>
-</ul>
-
+    <ul id="newsUl" class="list-group">
+        <li class="list-group-item" data-voteid="2">
+            <h2>News topic</h2>
+            <p>News-content ....</p>     
+        </li>
+    </ul>
 </div>
-<script src="../js/getIndexData.js"></script>
+<script src="../js/adminIndex.js"></script>
 <?php include_once '../layout/bottom.inc.php'; ?>
