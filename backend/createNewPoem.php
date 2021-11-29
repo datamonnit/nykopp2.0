@@ -1,11 +1,50 @@
 <?php 
 session_start();
+
+// Check if user is logged in
+/* 
 if (!isset($_SESSION['user_id'])){
     $data = array(
         'error' => 'You are not allowed here'
     );
     die();
 }
+ */
+
+// 1. Tiedoston upload-toiminto
+function uploadImage($array_name, $imageName, $path)
+{
+    if (move_uploaded_file($_FILES[$array_name]['tmp_name'], $path . $imageName))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+if ($_FILES['image']['name'] != '')
+{
+    $image = $_FILES['image']['name'];
+    if (uploadImage('image', $image, '../upload/poems/') == FALSE){
+        $data = array(
+            'error' => 'Upload was not succesfull'
+        );
+        echo json_encode($data);
+        die(); // Jos upload ei onnistu, palautetaan error json-muodossa
+    }
+} else {
+    $data = array(
+        'error' => 'Upload was not succesfull. No image data!!!'
+    );
+    echo json_encode($data);
+    die(); // Jos upload ei onnistu, palautetaan error json-muodossa
+}
+
+// 2. Jos tiedoston upload onnistuu
+//    niin listään runo tietokantaan
+
 // Tarkastetaan ensin onko post dataa
 if (!isset($_POST['topic']) || !isset($_POST['option1'])){
     $data = array(
