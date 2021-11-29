@@ -16,6 +16,7 @@ function uploadFile() {
     if(image_files.length) {
         let formData = new FormData();
         formData.append('image', image_files[0]);
+        formData.append('kissa', 'miau');
         let xhr = new XMLHttpRequest();
         xhr.open("POST", '../backend/createNewPoem.php', true);
         xhr.addEventListener("progress", function (e) {
