@@ -17,7 +17,7 @@ function uploadFile() {
         let formData = new FormData();
         formData.append('image', image_files[0]);
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", '../backend/upload.php', true);
+        xhr.open("POST", '../backend/createNewPoem.php', true);
         xhr.addEventListener("progress", function (e) {
             if(e.lengthComputable) {
                 let percentComplete = e.loaded / e.total * 100;
