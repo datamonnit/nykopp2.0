@@ -12,21 +12,17 @@ include_once '../layout/bottom.inc.php';
 ?>
 
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <h1>Manage admins</h1>
+<div class="row">
+    <div class="col">
+        <h1>Manage admins</h1>
             <h2>Current admins</h2>
-            <ul class="list-group">
-                <!-- Admin-lista kannasta -->
+            <ul id="adminUl" class="list-group">
                 
-                <li id="adminUl" class="list-group-item">
-              
-                <li class="list-group-item">
-            
-                <p>Olet kirjautunut käyttäjänä <?php echo $_SESSION['username']; ?></p>
-                <button type="button" class="btn btn-primary" onclick="newDeleteBtn(id)">Delete</button> 
-                </li>
             </ul>
+
+            <p>Olet kirjautunut käyttäjänä <?php echo $_SESSION['username']; ?></p>
+            
+
         </div>
         
         <a href="adminRegister.php" class="btn btn-primary">Create new admin user</a>
