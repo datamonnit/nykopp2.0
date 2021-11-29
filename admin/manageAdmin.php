@@ -1,12 +1,14 @@
 <?php 
 include_once '../layout/top.inc.php';
 
-if (!isset($_SESSION['logged_in'])) {
-    header('Location: ../index.php');
-}
+// if (!isset($_SESSION['logged_in'])) {
+//     header('Location: ../index.php');
+// }
 
 include_once '../layout/nav.inc.php';
 include_once '../layout/bottom.inc.php';
+
+
 ?>
 
 <div class="container">
@@ -18,23 +20,19 @@ include_once '../layout/bottom.inc.php';
                 <!-- Admin-lista kannasta -->
                 
                 <li id="adminUl" class="list-group-item">
-
-                    tuomas <button id="deleteLastAdmin" class="btn btn-danger">delete admin</button>
-
-                </li>
+              
                 <li class="list-group-item">
-                    käyttäjänimi
+            
+                <p>Olet kirjautunut käyttäjänä <?php echo $_SESSION['username']; ?></p>
+                <button type="button" class="btn btn-primary" onclick="newDeleteBtn(id)">Delete</button> 
                 </li>
-                    
-                <li class="list-group-item">
-                </li>   
             </ul>
         </div>
+        
         <a href="adminRegister.php" class="btn btn-primary">Create new admin user</a>
     </div>
 
 </div>
-    
 <script src="../js/admin.js"></script>
 <script src="../js/common.js"></script>
 </body>
