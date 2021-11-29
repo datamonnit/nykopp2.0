@@ -8,47 +8,42 @@ let data = null;
 
 
 
-function getAdmins(data){
+function getAdmins(){
  console.log('haetaan data');
  let ajax = new XMLHttpRequest();
  ajax.onload = function(){
      const data = JSON.parse(this.responseText);
      showAdmins(data);
  }
- ajax.open("GET", "../backend/showAdmin.php");
+ ajax.open("GET", "../backend/showAdmin.php?show_all=1");
  ajax.send();
 }
-  function showAdmins(data){
-    const ul = document.getElementById("adminUl");
-    ul.innerHTML = "";
+  
+function showAdmins(){
+  createAdminLi(ul, userid, adminId);
+  const ul = document.getElementById("adminUl");
+  ul.innerHTML = "";
 
-      data.forEach(users => {
-        const newLi = document.createElement('li');
-        newLi.classList.add('list-group-item');
-       
+  data.forEach(users => {
 
-        const liText = document.createTextNode(users.username);
-        newLi.appendChild(liText);
-       
+    createAdminLi(ul, userid, adminId);
+    const ul = document.getElementById("admin");
+  
 
-        ul.appendChild(newLi);
-
-        /*
-        <li class="list-group-item">
-            käyttäjänimi
-        </li>
-        */
-
-      
-      });
-  }
+    
+    
+    
+    
+    
+  
+    });
+  
 
 
-function createAdminLi(targetUl, userId, adminId) {
-
+function createAdminLi(targetUl, userid, adminId){
   const newLi = document.createElement('li');
   newLi.classList.add('list-group-item');
-  newLi.dataset.adminId = userId;
+  newLi.dataset.adminId = userid;
 
   const newDeleteBtn = document.createElement('button');
   newDeleteBtn.dataset.action = 'delete';
@@ -64,23 +59,21 @@ function createAdminLi(targetUl, userId, adminId) {
   targetUl.appendChild(newLi);
 }
 
- 
+}
 function openAdmin(event) {
-console.log(event.target.dataset);  
-const action = event.target.dataset.action;
+  console.log(event.target.dataset);  
+  const action = event.target.dataset.action;
+  const userid = event;
+  if (action == 'delete') {
+    let userid = event.target.parentElement.dataset.userid;
+    DeleteAdmin(userid);
+    return;
+  }
 
-
-if (action == 'delete') {
-  let userId = event.target.parentElement.dataset.userId;
-  deleteAdmin(userId);
-  return;
+  // window.location.href = "../admin/manageAdmin.php?id=" + event.target.dataset.userId;
 }
 
-
-window.location.href = "../admin/manageAdmin.php?id=" + event.target.dataset.userId;
-}
-
-function newDeleteBtn(id){
+function DeleteAdmin(id){
   let ajax = new XMLHttpRequest();
   ajax.onload = function(){
     data = JSON.parse(ajax.responseText);
@@ -89,10 +82,7 @@ function newDeleteBtn(id){
     let parent = LiToDelete.parentElement;
     parent.removeChild(LiToDelete);
   }
-  ajax.open("GET", "../backend/deleteAdmin.php?id=" + id);
+  ajax.open("GET", "backend/deleteAdmin.php?id=" + id);
   ajax.send();
 }
-  
-function deleteAdmin(id){
-  alert('Delete' + id);
-}
+
