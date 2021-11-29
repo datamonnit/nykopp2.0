@@ -46,13 +46,17 @@ function showNews(news){
         // const contentText =  document.createTextNode(oneNews.post_content);
         const btn = document.createElement('button');
 
-        if (window.location.href.indexOf('admin') > 0){
+        // document.getElementById("btn").onclick = function () {
+        //     location.href = "admin/editNews.php";
+        // };
+    
+        // if (window.location.href.indexOf('admin') > 0){
 
-            const btn = document.createElement('button');
+        //     const btn = document.createElement('button');
  
-         } else {
+        //  } else {
              
-         }
+        //  }
         
         // Lisätään uudet elementit DOMiin
         title.appendChild(titleText)   
