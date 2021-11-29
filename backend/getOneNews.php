@@ -5,12 +5,12 @@
 //     header('Location: ../index.php');
 // }
 
-$newsid = $_GET['id'];
+$post_id = $_GET['id'];
 
 include_once 'pdo-connect.php';
 
 try {
-    $stmt = $conn->prepare("SELECT id, post_topic, post_content, post_date, expdate FROM news WHERE id = :post_id");
+    $stmt = $conn->prepare("SELECT post_id, post_title, post_content, post_date, expdate FROM news WHERE post_id = :post_id");
 
     $stmt->bindParam(':post_id', $post_id);
 
