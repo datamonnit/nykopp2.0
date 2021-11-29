@@ -17,9 +17,15 @@ if (!isset($_SESSION['logged_in'])){
       <p class="mb-0"></a>.</p>
     </div>
 
+    <h2>Votes</h2>  
+    <ul class="list-group">
+        <li class="list-group-item">
+            Poems
+        </li>
+    </ul>
+
 </div>
 
   <script src="js/poems.js"></script>
   <script src="js/common.js"></script>
-
   <?php include_once 'layout/bottom.inc.php'; ?>
