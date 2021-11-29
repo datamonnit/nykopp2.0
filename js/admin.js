@@ -20,14 +20,14 @@ function getAdmins(){
 }
   
 function showAdmins(){
-  
+  createAdminLi(ul, userid, adminId);
   const ul = document.getElementById("adminUl");
   ul.innerHTML = "";
 
   data.forEach(users => {
 
-    createAdminLi(targetUl, userid, adminId);
-    
+    createAdminLi(ul, userid, adminId);
+    const ul = document.getElementById("admin");
   
 
     
