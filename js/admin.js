@@ -13,32 +13,32 @@ function getAdmins(){
  let ajax = new XMLHttpRequest();
  ajax.onload = function(){
      const data = JSON.parse(this.responseText);
-     showAdmins(data);
+     showAdmins();
  }
  ajax.open("GET", "../backend/showAdmin.php?show_all=1");
  ajax.send();
 }
   
 function showAdmins(){
-  createAdminLi(ul, userid, adminId);
-  const ul = document.getElementById("adminUl");
-  ul.innerHTML = "";
 
-  data.forEach(users => {
-
-    createAdminLi(ul, userid, adminId);
-    const ul = document.getElementById("admin");
   
 
+
+  const ul = document.getElementById("adminUl");
+  ul.innerHTML = "adminUl";
+ 
+
+  data.forEach(users => {
     
     
+  
     
     
     
   
     });
   
-
+  }
 
 function createAdminLi(targetUl, userid, adminId){
   const newLi = document.createElement('li');
@@ -59,8 +59,9 @@ function createAdminLi(targetUl, userid, adminId){
   targetUl.appendChild(newLi);
 }
 
-}
+
 function openAdmin(event) {
+
   console.log(event.target.dataset);  
   const action = event.target.dataset.action;
   const userid = event;
