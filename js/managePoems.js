@@ -5,7 +5,7 @@ function onSetFilename(data) {
     document.getElementById("progressBar").classList.add("bg-success");
 }
 
-//tee tänne error topicille
+//tee tänne error topicille.
 function uploadFile() {
     if (document.getElementById("topic").value.length < 1){
         alert('Lisää otsikko!!');
