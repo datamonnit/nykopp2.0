@@ -3,55 +3,41 @@
 window.addEventListener('load', getAdmins);
 document.getElementById('adminUl').addEventListener('click', openAdmin);
 
-
-let data = null;
-
-
-
 function getAdmins(){
  console.log('haetaan data');
  let ajax = new XMLHttpRequest();
  ajax.onload = function(){
      const data = JSON.parse(this.responseText);
-     showAdmins();
+     showAdmins(data);
  }
- ajax.open("GET", "../backend/showAdmin.php?show_all=1");
+ ajax.open("GET", "../backend/getAdmins.php");
  ajax.send();
 }
   
-function showAdmins(){
+function showAdmins(data){
 
-  
+  const ul = document.getElementById("adminUl"); 
 
-
-  const ul = document.getElementById("adminUl");
-  ul.innerHTML = "adminUl";
- 
-
-  data.forEach(users => {
-    
-    
-  
-    
-    
-    
-  
-    });
+  data.forEach(user => {
+    createAdminLi(ul, user.id, user.username)
+  });
   
   }
 
-function createAdminLi(targetUl, userid, adminId){
+function createAdminLi(targetUl, userId, userName){
   const newLi = document.createElement('li');
   newLi.classList.add('list-group-item');
-  newLi.dataset.adminId = userid;
+  newLi.dataset.userId = userId;
 
   const newDeleteBtn = document.createElement('button');
+  newDeleteBtn.classList.add('btn')
+  newDeleteBtn.classList.add('btn-danger')
+  newDeleteBtn.classList.add('float-right')
   newDeleteBtn.dataset.action = 'delete';
   const deleteText = document.createTextNode('Delete Admin');
   newDeleteBtn.appendChild(deleteText);
 
-
-  const liText = document.createTextNode(adminId);
+  const liText = document.createTextNode(userName);
   newLi.appendChild(liText);
 
   newLi.appendChild(newDeleteBtn);
