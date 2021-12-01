@@ -84,13 +84,13 @@ try{
 // jos äänestyksen lisääminen onnistui, niin lisätään myös vaihtoehdot
 
 // Valmistellaan vaihtoehdot array-rakenteeseen
-$options = array();
+/*$options = array();
 
 foreach ($_POST as $key => $value) {
     if (substr($key, 0, 6) == 'option') {
         $options[] = $value;
     }
-}
+} */
 // Haetaan edellisen insertin id
 $poem_id = $conn->lastInsertId();
 
