@@ -15,4 +15,17 @@ $headers = "From: $email" . "\r\n" .
 $message = "$message"  .  "$headers" . "\r\n";
 
 
-mail($to,$subject,$message,$headers);
+$result = mail($to,$subject,$message,$headers);
+
+if (!$result){
+    $data = array(
+        'error' => 'Error!'
+    );
+} else {
+    $data = array(
+        'success' => 'Email sent!'
+    );
+}
+
+header("Content-type: application/json;charset=utf-8");
+echo json_encode($data);

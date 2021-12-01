@@ -71,4 +71,4 @@ function DeleteAdmin(id){
   ajax.open("GET", "../backend/deleteAdmin.php?id=" + id);
   ajax.send();
 }
-  
+
