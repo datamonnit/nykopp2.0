@@ -25,7 +25,9 @@ include_once 'layout/top.inc.php';
                 </audio>
                 <h4>pitkä pitkä yö</h4>
                 <audio controls src= "music/Track 06.mp3" type="audio/mpeg">
-                </audio>
+                </audio> 
+                <br>   
+                <a href="./admin/manageMusic.php" class="btn btn-primary">add/delete Music</a>
             </ul>
         </div>
     </div>

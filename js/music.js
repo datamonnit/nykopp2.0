@@ -1,3 +1,4 @@
+
 document.addEventListener('submit', getMusic);
 document.getElementById('musicUl').addEventListener('click', openMusic);
 
@@ -46,9 +47,22 @@ function openMusic(event) {
     const action = event.target.dataset.action;
     if (action == 'delete') {
       let mus_id = event.target.parentElement.dataset.mus_id;
-      DeleteAdmin(mus_id);
+      deleteMusic(mus_id);
       return;
     }
 
-    
+    // window.location.href = "../admin/manageMusic.php?id=" + event.target.dataset.mus_id;
 }
+
+function deleteMusic(id){
+    let ajax = new XMLHttpRequest();
+    ajax.onload = function(){
+      data = JSON.parse(ajax.responseText);
+      console.log(data);
+      let LiToDelete = document.querySelector(`[data-mus-id="${id}"]`);
+      let parent = LiToDelete.parentElement;
+      parent.removeChild(LiToDelete);
+    }
+    ajax.open("GET", "../backend/deleteMusic.php?id=" + id);
+    ajax.send();
+  }
