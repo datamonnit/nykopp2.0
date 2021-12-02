@@ -32,11 +32,9 @@
     <ul id="poemsUl" class="list-group">
     </ul>
 
-
-        </div>
     </div>
-    
-</div>
+    </div>
+    </div>
 
 <script src="../js/managePoems.js"></script>
 <script src="../js/common.js"></script>

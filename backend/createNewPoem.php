@@ -41,13 +41,13 @@ session_start();
                 'error' => 'Upload was not succesfull. No image data!!!'
             );
             echo json_encode($data);
-            die(); // Jos upload ei onnistu, palautetaan error json-muodossa
+            die();  
         }
 
-                    // 2. Jos tiedoston upload onnistuu
-                    //    niin listään runo tietokantaan
+                        // 2. Jos tiedoston upload onnistuu
+                        //    niin listään runo tietokantaan
 
-                    // Tarkastetaan ensin onko post dataa
+                        // Tarkastetaan ensin onko post dataa
         if (!isset($_POST['topic']) || !isset($_POST['option1'])){
             $data = array(
                 'error' => 'POST_dataa ei saatavilla'
@@ -98,7 +98,7 @@ session_start();
 
             try{
                     // Tallenetaan kaikki vaihtoehdot
-                    
+
             foreach($options as $option){
                     // Luodaan pdo statement
 
