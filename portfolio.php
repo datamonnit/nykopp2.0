@@ -8,7 +8,7 @@
 </svg>
 </a>
 
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
@@ -27,7 +27,7 @@
 </div>
 
 
-<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel2">
+<div class="offcanvas offcanvas-bottom" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel2">
   <div class="offcanvas-header">
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
