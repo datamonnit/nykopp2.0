@@ -7,7 +7,7 @@ include_once 'layout/top.inc.php';
 <div class="container">
     <div class="row">
         <div class="col">
-            <ul class="musicUl" id="userMusic">
+            <ul id="musicUl" class="form-group">
                 <h4>Telemannic dreaming</h4>
                 <audio controls src="music/10 Telemannic dreaming.mp3" type="audio/mpeg">
                 </audio>

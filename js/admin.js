@@ -1,6 +1,6 @@
 //Salasanan resetointi javascript
 
-window.addEventListener('load', getAdmins);
+window.addEventListener('submit', getAdmins);
 document.getElementById('adminUl').addEventListener('click', openAdmin);
 
 function getAdmins(){
