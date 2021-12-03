@@ -1,30 +1,30 @@
 <?php 
 session_start();
 
-                    // Check if user is logged in
-                    /* 
-                    if (!isset($_SESSION['user_id'])){
-                        $data = array(
-                            'error' => 'You are not allowed here'
-                        );
-                        die();
-                    }
-                    */
+// Check if user is logged in
+/* 
+if (!isset($_SESSION['user_id'])){
+    $data = array(
+        'error' => 'You are not allowed here'
+    );
+    die();
+}
+*/
 
-                    // 1. Tiedoston upload-toiminto
+// 1. Tiedoston upload-toiminto
 
 
     function uploadImage($array_name, $imageName, $path)
-        {
-        if (move_uploaded_file($_FILES[$array_name]['tmp_name'], $path . $imageName))
-        {
-            return true;
-        }
+    {
+    if (move_uploaded_file($_FILES[$array_name]['tmp_name'], $path . $imageName))
+    {
+        return true;
+    }
         else
-        {
-            return false;
-        }
-        }
+    {
+        return false;
+    }
+    }
 
         if ($_FILES['image']['name'] != '')
         {
