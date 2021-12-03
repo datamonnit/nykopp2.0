@@ -13,7 +13,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="music.php">Music</a>
+          <a class="nav-link" href="manageMusic.php">Music</a>
         </li>
 
         <li class="nav-item">

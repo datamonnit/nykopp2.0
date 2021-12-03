@@ -1,5 +1,5 @@
-document.addEventListener('load', getMusic);
-document.getElementById('musicUl').addEventListener('submit', openMusic);
+window.addEventListener('load', getMusic);
+document.getElementById('musicUl').addEventListener('click', openMusic);
 
 
 
@@ -10,41 +10,49 @@ function getMusic() {
         const data = JSON.parse(this.responseText);
         showMusic(data);
     }
-    ajax.open("GET", "../backend/getMusic.php");
+    ajax.open("GET", "./backend/getMusic.php");
     ajax.send();
    }
 
 function showMusic(data) {
-const ul = document.getElementById("musicUl");
+  const ul = document.getElementById("musicUl");
 
-data.forEach(music => {
-  createMusicLi(ul, music.id, music.title)
-});
+
+  data.forEach(music => {
+    createMusicLi(ul, music.mus_id, music.mus_title);
+  });
 
 }
 
-function createMusicLi(targetUl, musId, mus_title) {
+function createMusicLi(targetUl, musId, musTitle) {
+
+    // li-elementin sisältö
+    // <h4>Telemannic dreaming</h4>
+    // <audio controls src="music/10 Telemannic dreaming.mp3" type="audio/mpeg"></audio>
+    
     const newLi = document.createElement('li');
     newLi.classList.add('list-group-item');
     newLi.dataset.musId = musId;
 
-    const newDelBtn = document.createElement('button');
-    newDelBtn.classList.add('btn');
-    newDelBtn.classlist.add('btn-danger');
+    const newDeleteBtn = document.createElement('button');
+    newDeleteBtn.classList.add('btn');
+    newDeleteBtn.classList.add('btn-danger');
+    newDeleteBtn.dataset.action = 'delete';
     const deleteText = document.createTextNode('delete music');
-    newDelBtn.dataset.action = 'delete';
+    newDeleteBtn.appendChild(deleteText);
 
       const newEditBtn = document.createElement('button');
+      newEditBtn.dataset.action = 'edit';
+      newEditBtn.classList.add('btn');
+      newDeleteBtn.classList.add('btn-danger');
       const editText = document.createTextNode('Edit');
       newEditBtn.appendChild(editText);
 
-    
-    newDelBtn.appendChild(deleteText);
-  
-    const liText = document.createTextNode(mus_title);
+    const liText = document.createTextNode(musTitle);
     newLi.appendChild(liText);
 
-    newLi.appendChild(newDelBtn);
+
+    newLi.appendChild(newDeleteBtn);
     newLi.appendChild(newEditBtn);
 
     targetUl.appendChild(newLi);
@@ -59,19 +67,29 @@ function openMusic(event) {
       deleteMusic(musId);
       return;
     }
-
+    if (action == 'edit'){  
+      let musId = event.target.parentElement.dataset.musId;
+      editMusic(musId);
+      return;
+    }
      window.location.href = "../admin/manageMusic.php?id=" + event.target.dataset.musId;
 }
 
 function deleteMusic(id){
     let ajax = new XMLHttpRequest();
     ajax.onload = function(){
-      data = JSON.parse(ajax.responseText);
+      data = JSON.parse(this.responseText);
       console.log(data);
       let LiToDelete = document.querySelector(`[data-mus-id="${id}"]`);
       let parent = LiToDelete.parentElement;
       parent.removeChild(LiToDelete);
     }
-    ajax.open("GET", "../backend/deleteMusic.php?id=" + id);
+    ajax.open("GET", "../backend/deleteAdmin.php?id=" + id);
     ajax.send();
+  }
+
+  function editMusic(id) {
+    alert('edit ' + id);
+    window.location.href = "../backend/editMusic.php?id=" + id;
+
   }

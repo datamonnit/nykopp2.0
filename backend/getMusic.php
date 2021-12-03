@@ -1,8 +1,10 @@
 <?php
-
+// getMusic.php returns all the music files to json
 session_start();
 
 include_once 'pdo-connect.php';
+
+
   
 try {
     $stmt = $conn->prepare("SELECT mus_id, mus_title, mus_file, mus_desc FROM music");
