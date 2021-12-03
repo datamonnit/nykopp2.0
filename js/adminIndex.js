@@ -84,9 +84,28 @@ function newsClick(event){
 
     if (event.target.dataset.action == 'edit'){
         console.log(`edit ${id}`)
+        window.location.href = "admin/editnews.php" + id;
+        
     }
 
     if (event.target.dataset.action == 'delete'){
         console.log(`delete ${id}`)
+        // Suorittaa deleteNews.php
+        // 
+        btnEdit.onclick = deleteNews();
+
     }
+}
+
+function deleteNews(id){
+    let ajax = new XMLHttpRequest();
+    ajax.onload = function(){
+        data = JSON.parse(this.responseText);
+        console.log(data);
+        let liToDelete = document.querySelector(`[data-newsid="${id}"]`)
+        let parent = liToDelete.parentElement;
+        parent.removeChild(liToDelete);
+    }
+    ajax.open("GET", "backend/deleteNews.php?id=" + id);
+    ajax.send();
 }
