@@ -1,3 +1,6 @@
+// const newsQueryString = window.location.search;
+// const newsParams = new URLSearchParams(newsQueryString);
+
 function getNewsData(id){
     console.log(id);
     let ajax = new XMLHttpRequest();
