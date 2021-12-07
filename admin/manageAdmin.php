@@ -18,7 +18,7 @@ include_once '../layout/bottom.inc.php';
         <h1>Manage admins</h1>
             <h2>Current admins</h2>
             <ul id="adminUl" class="list-group">
-                
+            
             </ul>
 
             <p>Olet kirjautunut käyttäjänä <?php echo $_SESSION['username']; ?></p>

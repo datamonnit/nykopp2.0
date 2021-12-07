@@ -29,7 +29,6 @@ function uploadImage($array_name, $imageName, $path) {
     }
 }
 
-
 // Onko tiedostonimi erisuuri kuin tyhjä merkkijono
 if ($_FILES['image']['name'] != '') {
 
