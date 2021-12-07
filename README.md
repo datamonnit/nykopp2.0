@@ -1,3 +1,2 @@
 # nykopp2.0
-Uusitut nykopin sivut
-moi
+Uusitut nykopin sivut!
