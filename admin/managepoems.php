@@ -4,16 +4,15 @@
 <div class="container">
     <h1>Manage poems</h1>
 </div>
-
 <div class="container">
     <div class="row">
         <div class="col">
             <h2>Add new</h2>  
             <div class="card">
-                <div class="card-header">Valitse Tiedosto</div>
+                <div class="card-header">Valitse PDF Tiedosto</div>
                 <div class="card-body">
                         <input type="text" class="form-control" id="topic" placeholder="topic">
-                        <h2></h2>
+                    <h2></h2>
                     <div class="custom-file">
                         <input type="file" name="image_file" class="custom-file-input" id="customFile" onchange="onSetFilename(this)"accept="application/pdf, application/vnd.ms-excel" />>
                         <label class="custom-file-label" id="custom-file-label" for="customFile"></label>   </div>
@@ -34,7 +33,7 @@
     </div>
     </div>
     </div>
-
+<script src="../js/poems.js"></script>
 <script src="../js/managePoems.js"></script>
 <script src="../js/common.js"></script>
 
