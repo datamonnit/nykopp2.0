@@ -1,6 +1,6 @@
 //Salasanan resetointi javascript
 
-window.addEventListener('submit', getAdmins);
+window.addEventListener('load', getAdmins);
 document.getElementById('adminUl').addEventListener('click', openAdmin);
 
 function getAdmins(){
@@ -25,6 +25,7 @@ function showAdmins(data){
   }
 
 function createAdminLi(targetUl, userId, userName){
+
   const newLi = document.createElement('li');
   newLi.classList.add('list-group-item');
   newLi.dataset.userId = userId;

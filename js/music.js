@@ -10,7 +10,7 @@ function getMusic() {
         const data = JSON.parse(this.responseText);
         showMusic(data);
     }
-    ajax.open("GET", "./backend/getMusic.php");
+    ajax.open("GET", "../backend/getMusic.php");
     ajax.send();
    }
 
@@ -90,6 +90,6 @@ function deleteMusic(id){
 
   function editMusic(id) {
     alert('edit ' + id);
-    window.location.href = "../backend/editMusic.php?id=" + id;
+    window.location.href = "../edit.php?id=" + id;
 
   }

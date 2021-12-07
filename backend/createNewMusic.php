@@ -2,11 +2,13 @@
  
 $data = array();
 //tarkistuksia ensin
-// if (!isset($_POST['username']) || !isset($_POST['password'])){
-// $data = array(
-// 'error' => 'POST-dataa ei saatavilla!'
-//     ); 
-// die();
+ if (!isset($_POST['id']) || !isset($_POST['mus_title'])){
+ $data = array(
+ 'error' => 'POST-dataa ei saatavilla!'
+     ); 
+ die();
+    }
+
 
 
 
