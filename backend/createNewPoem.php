@@ -10,12 +10,6 @@ if (!isset($_POST['topic'])){
     die();
 }
 
-// Tutki onko ladattava tiedosto PDF-muotoinen
-// name neljä viimeistä merkkiä ".pdf".
-// type == "application/pdf"
-
-
-
 // Check if user is logged in
 /* 
 if (!isset($_SESSION['user_id'])){
@@ -27,7 +21,6 @@ if (!isset($_SESSION['user_id'])){
 */
 
 // 1. Tiedoston upload-toiminto
-
 function uploadImage($array_name, $imageName, $path) {
     if (move_uploaded_file($_FILES[$array_name]['tmp_name'], $path . $imageName)) {
         return true;
