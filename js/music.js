@@ -90,6 +90,6 @@ function deleteMusic(id){
 
   function editMusic(id) {
     alert('edit ' + id);
-    window.location.href = "../edit.php?id=" + id;
+    window.location.href = "./edit.php?id=" + id;
 
   }

@@ -7,30 +7,23 @@ include_once 'layout/top.inc.php';
 <div class="container">
     <div class="row">
         <div class="col">
-             <ul id="" class="form-group">
-            <audio controls>
-            <source src="music/10 telemannic dreaming.mp3" type="audio/mpeg">
-            </audio>
-            <audio controls>
-            <source src="music/1 Intensity.mp3" type="audio/mpeg">
-            </audio>
-            <audio controls>
-            <source src="music/4 Rit.mp3" type="audio/mpeg">
-            </audio>
-            <audio controls>
-            <source src="music/painting an Agnes Martin painting F.mp3" type="audio/mpeg">
-            </audio>
-            <audio controls>
-            <source src="music/Track 03.mp3" type="audio/mpeg">
-            </audio>
-            <audio controls>
-            <source src="music/Track 06.mp3" type="audio/mpeg">
+        <ul class="audioUl"></ul>
+             <audio controls name="telemanic">
              </audio>
-            
+             <audio controls name="intensity">
+             </audio>
+             <audio controls name="Rit">
+             </audio>
+             <audio controls name="painting">
+             </audio>
+             <audio controls name="killtheMind">
+             </audio>
+             <audio controls name="longlongNight">
+             </audio>
             </ul> 
         </div>
     </div>
 </div>
 
-
+<script scr="js/common.js"></script>
 <?php include_once 'layout/bottom.inc.php';  ?>

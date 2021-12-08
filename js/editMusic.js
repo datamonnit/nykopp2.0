@@ -14,10 +14,13 @@ function getMusicData(id) {
         console.log(data);
         populateMusicForm(data);
     }
-    ajax.open("GET", "../backend/getMusic.php");
+    ajax.open("GET", "../backend/getMusic.php?id=" + id);
     ajax.send();
    }
 
 function populateMusicForm(data){
-    document.forms['music']['id'].value = data.id;
+   document.forms['editMusic']['mus_id'].value = data.id;
+   document.forms['editMusic']['mus_title'].value = data.title;
+   document.forms['editMusic']['mus_file'].value = data.file;
+   document.forms['editMusic']['mus_desc'].value = data.file;
 }
