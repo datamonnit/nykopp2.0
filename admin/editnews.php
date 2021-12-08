@@ -24,7 +24,7 @@
 
 </fieldset>
 
-<button type="submit" class="btn btn-primary">Save</button>
+<button type="submit" class="btn btn-primary">Tallenna</button>
 
 </form>
 

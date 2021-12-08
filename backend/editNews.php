@@ -16,8 +16,10 @@ $newsData = json_decode($json);
 
 $data = array();
 
+include_once 'pdo-connect.php';
+
 try {
-    $stmt = $conn->prepare("UPDATE news SET post_title = 'post_title', post_content = 'post_content', post_date = :post_date, expdate = :expdate
+    $stmt = $conn->prepare("UPDATE news SET post_title = :post_title, post_content = :post_content, post_date = :post_date, expdate = :expdate
                              WHERE id = :id;");
     $stmt->bindParam(":post_title", $newsData->post_title);
     $stmt->bindParam(":post_content", $newsData->post_content);
