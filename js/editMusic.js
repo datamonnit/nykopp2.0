@@ -23,4 +23,8 @@ function populateMusicForm(data){
    document.forms['editMusic']['mus_title'].value = data.title;
    document.forms['editMusic']['mus_file'].value = data.file;
    document.forms['editMusic']['mus_desc'].value = data.file;
+
+   data.options.forEach(function(option){
+    console.log(option);
+   });
 }
