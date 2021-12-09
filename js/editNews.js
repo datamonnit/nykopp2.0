@@ -24,8 +24,8 @@ function populateNewsForm(data){
     document.forms['editNews']['id'].value = data.post_id;
     document.forms['editNews']['topic'].value = data.post_title;
     document.forms['editNews']['content'].value = data.post_topic;
-    document.forms['editNews']['date'].value = data.start.replace(" ","T");
-    document.forms['editNews']['expdate'].value = data.end.replace(" ","T");
+    document.forms['editNews']['date'].value = data.post_date.replace(" ","T");
+    document.forms['editNews']['expdate'].value = data.expdate.replace(" ","T");
 
     const target = document.querySelector('fieldset');
 }
