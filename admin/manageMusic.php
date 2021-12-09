@@ -7,7 +7,7 @@ include_once '../layout/nav.inc.php';
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2>editoi musiikkia</h2>
+            <h2>poista musiikkia</h2>
             <ul id="musicUl" class="form-group">
                 
             </ul>
@@ -17,6 +17,6 @@ include_once '../layout/nav.inc.php';
 
 
 
-<script src="../js/music.js"></script>
+<script src="../js/editMusic.js"></script>
 <script src="../js/common.js"></script>
 <?php include_once '../layout/bottom.inc.php'; ?>

@@ -7,23 +7,25 @@ include_once 'layout/top.inc.php';
 <div class="container">
     <div class="row">
         <div class="col">
-        <ul class="audioUl"></ul>
-             <audio controls name="telemanic">
+            <ul id="musicUl" class="musicUl">
+                <!-- 
+            <audio controls name="telemanic" type="audio/mpeg">
              </audio>
-             <audio controls name="intensity">
+             <audio controls name="intensity" type="audio/mpeg">
              </audio>
-             <audio controls name="Rit">
+             <audio controls name="Rit" type="audio/mpeg">
              </audio>
-             <audio controls name="painting">
+             <audio controls name="painting" type="audio/mpeg">
              </audio>
-             <audio controls name="killtheMind">
+             <audio controls name="killtheMind" type="audio/mpeg">
              </audio>
-             <audio controls name="longlongNight">
-             </audio>
+             <audio controls name="longlongNight" type="audio/mpeg">
+             </audio>                
+                 -->
             </ul> 
         </div>
     </div>
 </div>
-
-<script scr="js/common.js"></script>
+<script src="./js/music.js"></script>
+<script scr="./js/common.js"></script>
 <?php include_once 'layout/bottom.inc.php';  ?>
