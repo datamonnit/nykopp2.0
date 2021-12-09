@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php 
+<?php
     if (!isset($_SESSION['logged_in'])){
       header('Location: admin/managepoems.php');
       die();
@@ -27,6 +27,6 @@
 
 </div>
 
-    <script src="js/poems.js"></script>
-    <script src="js/common.js"></script>
-    <?php include_once 'layout/bottom.inc.php'; ?>
+  <script src="js/poems.js"></script>
+  <script src="js/common.js"></script>
+  <?php include_once 'layout/bottom.inc.php'; ?>

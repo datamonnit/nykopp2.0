@@ -16,7 +16,7 @@
 
   include_once 'pdo-connect.php';
 
-
+  
 
   try {
       $stmt = $conn->prepare("INSERT INTO users (username, pwd, email) VALUES (:username, :pwd, :email);");
@@ -41,9 +41,9 @@
   } else {
       $data = array(
       'error' => 'tuli virhe käyttäjän tallentamisessa!'
-      );  
-        } 
-  }   
+      );
+        }
+  }
   header("Content-type: application/json;charset=utf-8");    
   echo json_encode($data);
   ?>

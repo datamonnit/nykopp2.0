@@ -28,29 +28,3 @@ try {
       'error' => 'error tapahtui tallennuksessa'  
     );
 }
-
-// delete poems try catch 
-
-try {
-    $stmt = $conn->prepare("DELETE FROM poem WHERE id = :poem_id;");
-    $stmt->bindParam(':poem_id', $poemId);
-    
-    if ($stmt->execute() == false){
-        $data = array(
-            'error' => 'error occured'
-        );
-    } else {
-        $data = array(
-            'success' => 'delete successful'
-        );
-    }
-    
-} catch (PDOException $e) {
-    $data = array(
-        'error' => 'error tapahtui tallennuksessa'
-    );
-}
-
-
-header('Content-Type: application/json;charset=utf-8');
-echo json_encode($data);
