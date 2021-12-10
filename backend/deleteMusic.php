@@ -10,8 +10,8 @@ include_once 'pdo-connect.php';
 
 
 try {
-    $stmt = $conn->prepare("DELETE FROM music WHERE id = :mus_id;");
-    $stmt->bindParam(':mus_id', $musId);
+    $stmt = $conn->prepare("DELETE FROM music WHERE id = :musId;");
+    $stmt->bindParam(':musId', $mus_id);
 
     if ($stmt->execute() == false){
         $data = array(
