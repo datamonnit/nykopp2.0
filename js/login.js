@@ -25,7 +25,7 @@ ajax.onload = function(){
         showMessage('error', 'kirjautuminen epäonnistui');
     }
 }
-ajax.open("POST", "backend/loginAdmin.php", true);
+ajax.open("POST", "backend/loggedIn.php", true);
 ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 ajax.send(`username=${username}&password=${password}`);
 

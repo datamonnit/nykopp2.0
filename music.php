@@ -7,33 +7,25 @@ include_once 'layout/top.inc.php';
 <div class="container">
     <div class="row">
         <div class="col">
-            <ul class="musicUl" id="music">
-                <audio controls>
-                <source src="music/10 Telemannic_dreaming.mp3" type="audio/mpeg">
-                </audio>
-                <audio controls> 
-                <source src="music/4 Rit.mp3" type="audio/mpeg"> 
-                </audio>
-
-                <audio controls>
-               <source src="music/1 intensity.mp3" type="audio/mpeg"> 
-                </audio>
-
-                <audio controls>
-               <source src="music/painting an Agnes Martin painting.mp3" type="audio/mpeg">
-                </audio>
-
-                <audio controls>
-               <source src="music/to kill the mind.mp3" type="audio/mpeg">
-                </audio>
-                
-                <audio controls>
-                <source src= "music/Track 06.mp3" type="audio/mpeg">
-                </audio>
-            </ul>
+            <ul id="musicUl" class="musicUl">
+                <!-- 
+            <audio controls name="telemanic" type="audio/mpeg">
+             </audio>
+             <audio controls name="intensity" type="audio/mpeg">
+             </audio>
+             <audio controls name="Rit" type="audio/mpeg">
+             </audio>
+             <audio controls name="painting" type="audio/mpeg">
+             </audio>
+             <audio controls name="killtheMind" type="audio/mpeg">
+             </audio>
+             <audio controls name="longlongNight" type="audio/mpeg">
+             </audio>                
+                 -->
+            </ul> 
         </div>
     </div>
 </div>
-
-
+<script src="./js/music.js"></script>
+<script scr="./js/common.js"></script>
 <?php include_once 'layout/bottom.inc.php';  ?>

@@ -1,5 +1,5 @@
 .vscode/
 config.env.php
-node_modules/*
-new_images/*
 music/*
+new_images/*
+node_modules/*

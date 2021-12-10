@@ -16,7 +16,7 @@
           <a class="nav-link" href="logout.php">Portfolio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="login.php">Music</a>
+          <a class="nav-link" href="music.php">Music</a>
         </li>
 
         <li class="nav-item">
@@ -29,10 +29,10 @@
           <a class="nav-link" href="contact.php">Contacts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="adminLogin.php">admin</a>
+          <a class="nav-link" href="admin/">Admin</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="admin/manageAdmin.php">manage admins</a>
+          <a class="nav-link" href="manageAdmin.php">manage admins</a>
         </li>
       </ul>
     </div>

@@ -13,7 +13,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Music</a>
+          <a class="nav-link" href="manageMusic.php">manage Music</a>
         </li>
 
         <li class="nav-item">
@@ -27,6 +27,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="manageAdmin.php">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="logout.php">Logout</a>
         </li>
       </ul>
     </div>

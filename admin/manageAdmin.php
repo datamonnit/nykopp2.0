@@ -1,11 +1,12 @@
 <?php 
 include_once '../layout/top.inc.php';
 
-if (!isset($_SESSION['logged_in'])) {
+ if (!isset($_SESSION['logged_in'])) {
     header('Location: ../index.php');
-}
+    die();
+ }
 
-include_once '../layout/nav.inc.php';
+include_once '../layout/admin-nav.inc.php';
 include_once '../layout/bottom.inc.php';
 
 
@@ -20,9 +21,8 @@ include_once '../layout/bottom.inc.php';
                 
             </ul>
 
-            <p>Olet kirjautunut käyttäjänä <?php echo $_SESSION['username']; ?></p>
-            
 
+            <p>Olet kirjautunut käyttäjänä <?php echo $_SESSION['username']; ?></p>
         </div>
         
         <a href="adminRegister.php" class="btn btn-primary">Create new admin user</a>
