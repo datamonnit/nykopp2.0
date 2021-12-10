@@ -1,6 +1,6 @@
 // get id from queryString
 window.addEventListener('load', getMusic);
-document.getElementById('musicUl').addEventListener('click', openMusic);
+
 
 function getMusic() {
     console.log('haetaan dataa');
