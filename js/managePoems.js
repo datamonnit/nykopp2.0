@@ -5,9 +5,9 @@ function onSetFilename(data) {
     document.getElementById("progressBar").classList.add("bg-success");
 }
 
-//tee tänne error topicille.
+            //tee tänne error topicille
 function uploadFile() {
-    // Tarkista että otsikko on kirjoitettu
+            // Tarkista että otsikko on kirjoitettu
     if (document.getElementById("topic").value.length < 1){
         alert('Lisää otsikko!!');
         return;

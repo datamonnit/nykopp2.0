@@ -3,7 +3,7 @@ document.forms['createnews'].addEventListener('submit', createNews);
 
 function createNews(event){
     event.preventDefault();
-    console.log('save new poll');
+    console.log('save new poem');
 
     const title = document.forms['createnews']['post_title'].value;
     const content = document.forms['createnews']['post_content'].value;

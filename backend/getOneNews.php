@@ -1,5 +1,5 @@
 <?php
-// Get all polls from database
+// Get all poems from database
 
 // if (!isset($_GET['id'])){
 //     header('Location: ../index.php');
