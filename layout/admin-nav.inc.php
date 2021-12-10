@@ -31,6 +31,9 @@
         <li class="nav-item">
           <a class="nav-link" href="logout.php">Logout</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="manageAdmin.php">manage admins</a>
+        </li>
       </ul>
     </div>
   </div>

@@ -1,7 +1,6 @@
 // get id from queryString
 window.addEventListener('load', getMusic);
 
-
 function getMusic() {
     console.log('haetaan dataa');
     let ajax = new XMLHttpRequest();
@@ -17,7 +16,7 @@ function showMusic(data){
     const ul = document.getElementById("musicUl");
 
     data.forEach(music => {
-    createMusicLi(ul, music.mus_id, music.mus_title);
+     createMusicLi(ul, music.mus_id, music.mus_title)
    });
 
 }
@@ -46,8 +45,8 @@ function createMusicLi(targetUl, musId, musTitle){
     const liText = document.createTextNode(musTitle);
     newLi.appendChild(liText);
 
-
     newLi.appendChild(newDeleteBtn);
+
     newLi.appendChild(newEditBtn);
 
     targetUl.appendChild(newLi);
@@ -75,9 +74,11 @@ function deleteMusic(id){
     ajax.onload = function(){
       data = JSON.parse(this.responseText);
       console.log(data);
-      let LiToDelete = document.querySelector(`[data-mus-id="${id}"]`);
-      let parent = LiToDelete.parentElement;
-      parent.removeChild(LiToDelete);
+      if ($data == 'success'){
+        let LiToDelete = document.querySelector(`[data-mus-id="${id}"]`);
+        let parent = LiToDelete.parentElement;
+        parent.removeChild(LiToDelete);
+      }
     }
     ajax.open("GET", "../backend/deleteMusic.php?id=" + id);
     ajax.send();
