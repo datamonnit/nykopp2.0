@@ -11,21 +11,13 @@ session_start();
 //     die();
 // }
 
-$json = file_get_contents('php://input');
-$newsData = json_decode($json);
-
-$data = array();
+$newsId = $_GET['id'];
 
 include_once 'pdo-connect.php';
 
 try {
-    $stmt = $conn->prepare("UPDATE news SET post_title = :post_title, post_content = :post_content, post_date = :post_date, expdate = :expdate
-                             WHERE id = :id;");
-    $stmt->bindParam(":post_title", $newsData->post_title);
-    $stmt->bindParam(":post_content", $newsData->post_content);
-    $stmt->bindParam(":post_date", $newsData->post_date);
-    $stmt->bindParam(":expdate", $newsData->expdate);
-    $stmt->bindParam(":id", $newsData->id);
+    $stmt = $conn->prepare("DELETE FROM news WHERE post_id = :id;");
+    $stmt->bindParam(":id", $newsId);
 
     if($stmt->execute() == false){
         $data['error'] = 'Error modifying news';

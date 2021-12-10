@@ -30,6 +30,8 @@ function showNews(news){
 
     const ul = document.getElementById("newsUl");
     ul.innerHTML = "";
+    // newLi.classList.add('list-group-item');
+    // li.dataset.newsid = news;
 
     news.forEach(oneNews => {
         if (oneNews.post_title.length <= 0) {
@@ -39,6 +41,7 @@ function showNews(news){
         const li = document.createElement('li');
         li.id = oneNews.post_id;
         li.classList.add('list-group-item');
+        // li.dataset.newsid = id;
 
         // LI-elementtiin uutisen otsikko
         const title = document.createElement('h3');
@@ -84,9 +87,35 @@ function newsClick(event){
 
     if (event.target.dataset.action == 'edit'){
         console.log(`edit ${id}`)
+
+        editNews(id);
+        return;
+        
     }
 
     if (event.target.dataset.action == 'delete'){
         console.log(`delete ${id}`)
+
+        deleteNews(id);
+        return;
+
     }
+}
+
+function deleteNews(id){
+    let ajax = new XMLHttpRequest();
+    ajax.onload = function(){
+        data = JSON.parse(this.responseText);
+        console.log(data);
+        // let liToDelete = document.querySelector(`[data-newsid="${id}"]`)
+        // let parent = liToDelete.parentElement;
+        // parent.removeChild(liToDelete);
+    }
+    ajax.open("GET", "../backend/deleteNews.php?id=" + id);
+    ajax.send();
+}
+
+function editNews(id){
+    alert('Edit ' + id);
+    window.location.href = "editNews.php?id="+id;
 }

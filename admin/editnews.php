@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <?php
 // if (!isset($_SESSION['logged_in'])){
 //     header('Location: index.php');
@@ -15,6 +14,8 @@
 
     <div class="form-group">
 
+    <input name="id" type="text" class="form-control" placeholder="id">
+
     <input name="topic" type="text" class="form-control" placeholder="topic">
 
     <input name="content" type="text" class="form-control" placeholder="content">
@@ -25,7 +26,7 @@
 
 </fieldset>
 
-<button type="submit" class="btn btn-primary">Save</button>
+<button type="submit" class="btn btn-primary">Tallenna</button>
 
 </form>
 
