@@ -30,29 +30,37 @@ function createMusicLi(targetUl, musId, musTitle, musFile) {
     // <h4>Telemannic dreaming</h4>
     // <audio controls src="music/10 Telemannic dreaming.mp3" type="audio/mpeg"></audio>
     
+    // list-group-item
     const newLi = document.createElement('li');
     newLi.classList.add('list-group-item');
     newLi.dataset.musId = musId;
 
+    // h4 - music title
     const musicTitle = document.createElement('h4');
     const musicTitleText = document.createTextNode(musTitle);
     musicTitle.appendChild(musicTitleText);
 
+    // audio
     const audioEl = document.createElement('audio');
     audioEl.src = `./music/${musFile}`;
-
+    
+    // audio - type
     const typeAttribute = document.createAttribute('type');
     typeAttribute.value = "audio/mpeg";
     audioEl.setAttributeNode(typeAttribute);
+    
+    const controlsAttribute = document.createAttribute('controls');
+    audioEl.setAttributeNode(controlsAttribute);
 
-    const musicFile = document.createElement('name');
-    const musicFileAudio = document.createTextNode(musFile);
-    musicFile.appendChild(musicFileAudio);
+    // audio
+    // const musicFile = document.createElement('name');
+    // const musicFileAudio = document.createTextNode(musFile);
+    // musicFile.appendChild(musicFileAudio);
 
 
     newLi.appendChild(musicTitle);
     newLi.appendChild(audioEl);
-    newLi.appendChild(musicFileAudio);
+    // newLi.appendChild(musicFileAudio);
 
     targetUl.appendChild(newLi);
 }
