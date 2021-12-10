@@ -18,7 +18,7 @@ function createNews(event){
     ajax.onload = function(){
         const data = JSON.parse(this.responseText);
         if (data.hasOwnProperty('success')) {
-            window.location.href = "../index.php?type=success&mag=Uutinen lisätty!"
+            window.location.href = "admin/index.php?type=success&mag=Uutinen lisätty!"
         } else {
             // showMessage('error',data.error);
             die();

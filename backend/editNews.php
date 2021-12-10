@@ -20,12 +20,12 @@ include_once 'pdo-connect.php';
 
 try {
     $stmt = $conn->prepare("UPDATE news SET post_title = :post_title, post_content = :post_content, post_date = :post_date, expdate = :expdate
-                             WHERE id = :id;");
+                             WHERE post_id = :id;");
     $stmt->bindParam(":post_title", $newsData->post_title);
     $stmt->bindParam(":post_content", $newsData->post_content);
     $stmt->bindParam(":post_date", $newsData->post_date);
     $stmt->bindParam(":expdate", $newsData->expdate);
-    $stmt->bindParam(":id", $newsData->id);
+    $stmt->bindParam(":id", $newsData->post_id);
 
     if($stmt->execute() == false){
         $data['error'] = 'Error modifying news';

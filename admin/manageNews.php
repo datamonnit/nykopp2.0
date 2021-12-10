@@ -31,4 +31,6 @@ TODO:
         </li>
     </ul>
 
-<script src="../js/getIndexData.js"></script>
+<!-- <script src="../js/getIndexData.js"></script> -->
+<script src="../js/adminIndex.js"></script>
+<?php include_once '../layout/bottom.inc.php'; ?>
