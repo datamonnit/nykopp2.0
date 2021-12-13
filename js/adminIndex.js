@@ -109,9 +109,9 @@ function deleteNews(id){
         console.log(data);
         // tästä eteenpäin
         
-        // let liToDelete = document.querySelector(`[data-newsid="${id}"]`)
-        // let parent = liToDelete.parentElement;
-        // parent.removeChild(liToDelete);
+        let liToDelete = document.querySelector(`[data-newsid="${id}"]`)
+        let parent = liToDelete.parentElement;
+        parent.removeChild(liToDelete);
     }
     ajax.open("GET", "../backend/deleteNews.php?id=" + id);
     ajax.send();
