@@ -1,5 +1,6 @@
 // get id from queryString
 window.addEventListener('load', getMusic);
+document.getElementById('musicUl').addEventListener('click', openMusic);
 
 function getMusic() {
     console.log('haetaan dataa');
@@ -74,11 +75,9 @@ function deleteMusic(id){
     ajax.onload = function(){
       data = JSON.parse(this.responseText);
       console.log(data);
-      if ($data == 'success'){
         let LiToDelete = document.querySelector(`[data-mus-id="${id}"]`);
         let parent = LiToDelete.parentElement;
         parent.removeChild(LiToDelete);
-      }
     }
     ajax.open("GET", "../backend/deleteMusic.php?id=" + id);
     ajax.send();
