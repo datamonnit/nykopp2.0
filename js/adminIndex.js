@@ -109,7 +109,7 @@ function deleteNews(id){
         console.log(data);
         // tästä eteenpäin
         
-        let liToDelete = document.querySelector(`[data-newsid="${id}"]`)
+        let liToDelete = document.querySelector(`[data-id="${id}"]`)
         let parent = liToDelete.parentElement;
         parent.removeChild(liToDelete);
     }
