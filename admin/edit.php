@@ -1,11 +1,11 @@
 <?php include_once '../layout/top.inc.php';?>
 <?php include_once '../layout/nav.inc.php'; ?>    
-<form name="editMusic">
     <div class="container">
-        <div class="col">
+      <div class="col">
+        <form name="editMusic">
           <fieldset>
             <h3>editointi</h3>
-            <form class="editMusic">
+            <div class="form-group">
             <input type="hidden" name="id">   
             <label for="title">musiikin otsikko</label>
             <input name="title" type="text" class="form-control" placeholder="title">
@@ -13,12 +13,12 @@
             <input name="file" type="text" class="form-control" placeholder="file">
             <label for="desc">musiikin alaotsikko</label>
             <input name="desc" type="text" class="form-control" placeholder="desc">
-            <button type="submit" class="btn btn-primary">tallenna muutokset</button>
             </li>
-          </fieldset>  
+          </fieldset>
+          <button type="submit" class="btn btn-primary">tallenna muutokset</button>  
         </div>  
     </div>
-</form>
+</div>
 
 <script src="../js/common.js"></script>
 <script src="../js/edit.js"></script>

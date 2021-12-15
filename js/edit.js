@@ -16,49 +16,59 @@ function getMusicData(id){
     ajax.onload = function(){
         const data = JSON.parse(this.responseText);
         console.log(data);
-        //populateMusicData(data);
+        populateMusicForm(data);
     }
-    ajax.open("GET", "../backend/getMusic.php");
+    ajax.open("GET", "../backend/getEditMusic.php");
     ajax.send();
    }
 
-function populateMusicData(data){
-    document.forms['editMusic']['mus_title'].value = music.title;
-    document.forms['editMusic']['mus_id'].value = music.id;
-    document.forms['editMusic']['mus_file'].value = music.file;
-    document.forms['editMusic']['mus_desc'].value = music.desc;
+function populateMusicForm(data){
+    document.forms['editMusic']['id'].value = data.mus_id;
+    document.forms['editMusic']['title'].value = data.mus_title;
+    document.forms['editMusic']['file'].value = data.mus_file;
+    document.forms['editMusic']['desc'].value = data.mus_desc;
 
-    //const target = document.querySelector('fieldset');
+    const target = document.querySelector('fieldset');
 
 
     data.music.forEach(function(music){
     console.log(music);
-     musicCount++;
-    createMusicInput(musicCount, music.mus_id, music.mus_title, music.mus_file, music.mus_desc)
+    target.appendChild(createMusicInput(music.mus.id, music.mus.title, music.mus.file, music.mus.desc));
 
     })
 }
+function createMusicInput(mus_id, mus_title, mus_file, mus_desc){
+ 
+input.value = mus_title;
 
+ input.dataset.musId = mus_id; 
+ 
+ input.value = mus_file;
+
+ input.value = mus_desc;
+
+
+}   
 function modifyMusic(event){
     event.preventDefault();
     console.log('save changes');
-
+    
 
 
 
 // collect pollmusic from form
 let pollMusic = {};
-pollMusic.id = document.forms['id'].value = music.id;
-pollMusic.title = document.forms['title'].value = music.title;
-pollMusic.file = document.forms['file'].value = music.file;
-pollMusic.desc = document.forms['desc'].value = music.desc;
+pollMusic.id = document.forms['id'].value;
+pollMusic.title = document.forms['title'].value;
+pollMusic.file = document.forms['file'].value;
+pollMusic.desc = document.forms['desc'].value;
 
 const music = [];
 const inputs = document.querySelectorAll('input');
 
 inputs.forEach(function(input){
 if(input.name.indexOf('music') == 0){
-    music.push({ id: input.dataset.musicId, title: input.value})
+    music.push({ id: input.dataset.musicId, name: input.value})
     }   
 })
 
@@ -73,7 +83,7 @@ ajax.onload = function(){
     let data = JSON.parse(this.responseText);
     console.log(data);
 }
-ajax.open("POST", "backend/modifyMusic.php", true);
+ajax.open("POST", "../backend/modifyMusic.php", true);
 ajax.setRequestHeader('Content-Type', 'application/json');
 ajax.send(JSON.stringify(pollMusic));
 
