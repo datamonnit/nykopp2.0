@@ -30,6 +30,16 @@ function createPoemsLi(targetUl, poemId, poemTitle) {
         newLi.classList.add('list-group-item');
         newLi.dataset.poemId = poemId;
 
+        const newButton = document.createElement('button');
+        newButton.classList.add('btn');
+        newButton.classList.add('btn-primary');
+        newButton.dataset.action =  'open';
+
+        const btnText = document.createTextNode('Open');
+        newButton.appendChild(btnText);
+
+        newLi.appendChild(newButton);
+
     
         const liText = document.createTextNode(poemTitle);
         newLi.appendChild(liText);
@@ -37,20 +47,16 @@ function createPoemsLi(targetUl, poemId, poemTitle) {
         targetUl.appendChild(newLi);
     }
 
+    //document.getElementById("btn-btn-primary").addEventListener("click", displayDate);
 
     function openPoem(event) {
-        console.log(event.target.dataset);  
+        // console.log(event.target.dataset);
         const action = event.target.dataset.action;
-        if (action == 'delete') {
+        if (action == 'open') {
           let poemId = event.target.parentElement.dataset.poemId;
-          deletePoem(poemId);
-          return;
-        }
-        if (action == 'edit'){  
-          let poemId = event.target.parentElement.dataset.poemId;
-          editPoem(poemId);
+          openPoem(poemId);
           return;
         }
          window.location.href = "./showPoem.php?id=" + event.target.dataset.poemId;
     }
-    
+
