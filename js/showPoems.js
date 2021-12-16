@@ -53,6 +53,7 @@ function createPoemsLi(targetUl, poemId, poemTitle) {
         newButton.classList.add('btn');
         newButton.classList.add('btn-primary');
         newButton.dataset.action =  'open';
+        newButton.onClick = openPoem;
 
         const btnText = document.createTextNode('Open');
         newButton.appendChild(btnText);
@@ -73,7 +74,7 @@ function createPoemsLi(targetUl, poemId, poemTitle) {
         const action = event.target.dataset.action;
         if (action == 'open') {
           let poemId = event.target.parentElement.dataset.poemId;
-          window.location.href = "./showPoem.php?id=" + poemId;
+          window.location.href = "./backend/downloadPoem.php?id=" + poemId;
           return;
         }
         
