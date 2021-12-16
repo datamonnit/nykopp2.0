@@ -18,7 +18,7 @@
   </div>
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Uutinen</label>
-    <textarea name="post_content" class="form-control" rows="2"></textarea>
+    <textarea name="post_content" class="form-control" rows="10"></textarea>
   </div>
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Alkamispäivä</label>

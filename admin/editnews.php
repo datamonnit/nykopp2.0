@@ -23,7 +23,7 @@
     </div>
 
     <div class="mb-3">
-    <input name="content" type="text" class="form-control" placeholder="content">
+    <textarea name="content" type="text" class="form-control" placeholder="content" rows="10"></textarea>
     </div>
 
     <div class="mb-3">
