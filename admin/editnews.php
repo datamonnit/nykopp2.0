@@ -14,7 +14,7 @@
 
     <div class="form-group">
 
-    <input name="id" type="text" class="form-control" placeholder="id">
+    <input name="id" type="hidden" class="form-control" placeholder="id">
 
     <input name="topic" type="text" class="form-control" placeholder="topic">
 
