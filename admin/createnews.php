@@ -22,11 +22,11 @@
   </div>
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Alkamispäivä</label>
-    <textarea name="post_date" class="form-control" rows="3" type="datetime-local"></textarea>
+    <input name="post_date" class="form-control" type="date"></input>
   </div>
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Päättymispäivä</label>
-    <textarea name="expdate" class="form-control" rows="3" type="datetime-local"></textarea>
+    <input name="expdate" class="form-control"  type="date"></input>
   </div>
 
   <div class="mb-3">
