@@ -12,7 +12,8 @@
 <ul id="poemsUl" class="list-group">
     </ul>
 
-<script src="./js/showPoems.js"></script>
 <script src="./js/common.js"></script>
+<script src="./js/showPoems.js"></script>
+
 
 <?php include_once './layout/bottom.inc.php'; ?>

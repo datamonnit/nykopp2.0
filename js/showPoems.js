@@ -1,5 +1,24 @@
-window.addEventListener('load', getPoems);
 document.getElementById('poemsUl').addEventListener('click', openPoem);
+
+
+if (urlParams.has('id')) {
+    const id = urlParams.get('id');
+    showPoem(id);
+} else {
+    window.addEventListener('load', getPoems);
+}
+
+function showPoem(id){
+    console.log('Haetaan data')
+    let ajax = new XMLHttpRequest();
+    ajax.onload = function(){
+        const data = JSON.parse(this.responseText);
+        console.log(data)
+    }
+    ajax.open("GET", "./backend/listPoems.php");
+    ajax.send();
+}
+
 
 
 // Get all poems from database and show on manage page
@@ -54,9 +73,30 @@ function createPoemsLi(targetUl, poemId, poemTitle) {
         const action = event.target.dataset.action;
         if (action == 'open') {
           let poemId = event.target.parentElement.dataset.poemId;
-          openPoem(poemId);
+          window.location.href = "./showPoem.php?id=" + poemId;
           return;
         }
-         window.location.href = "./showPoem.php?id=" + event.target.dataset.poemId;
+        
     }
 
+
+
+    /*
+        var poems = [...];
+        createLiElement(poems);
+        ...
+        function createLiElement(poems){
+        elem = ... 
+        elem.poemData = poems[i];
+        elem.addEventListener('click', openPoem);
+        }
+
+        function openPoem(elem){
+
+        var poem = elem.poemData;
+        createHTMLElement(poem);
+        }
+
+        function createHTMLElement(poem){
+        poemElemRoot = document.getElementById('poemContainer');
+        */

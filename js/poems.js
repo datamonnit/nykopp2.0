@@ -46,19 +46,21 @@ function createPoemsLi(targetUl, poemId, poemTitle) {
         const deleteText = document.createTextNode('delete poem');
         newDeleteBtn.appendChild(deleteText);
     
+        /*
             const newEditBtn = document.createElement('button');
             newEditBtn.dataset.action = 'edit';
             newEditBtn.classList.add('btn');
             newDeleteBtn.classList.add('btn-danger');
             const editText = document.createTextNode('Edit');
             newEditBtn.appendChild(editText);
-    
+        */
+
         const liText = document.createTextNode(poemTitle);
         newLi.appendChild(liText);
     
     
         newLi.appendChild(newDeleteBtn);
-        newLi.appendChild(newEditBtn);
+        /*newLi.appendChild(newEditBtn); */
     
         targetUl.appendChild(newLi);
     }
