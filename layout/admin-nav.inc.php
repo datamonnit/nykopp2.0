@@ -33,6 +33,11 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="logout.php">Logout</a>
+        <li class="nav-item">
+          <a class="nav-link" href="createNews.php">Create news</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="adminRegister.php">Users</a>
         </li>
       </ul>
     </div>

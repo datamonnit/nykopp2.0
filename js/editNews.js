@@ -23,11 +23,10 @@ function getNewsData(id){
 function populateNewsForm(data){
     document.forms['editNews']['id'].value = data.post_id;
     document.forms['editNews']['topic'].value = data.post_title;
-    document.forms['editNews']['content'].value = data.post_topic;
+    document.forms['editNews']['content'].value = data.post_content;
     document.forms['editNews']['date'].value = data.post_date.replace(" ","T");
     document.forms['editNews']['expdate'].value = data.expdate.replace(" ","T");
 
-    const target = document.querySelector('fieldset');
 }
 
 function modifyNews(event){
@@ -36,17 +35,17 @@ function modifyNews(event){
 
     // kerää tiedot
     let newsData = {};
-    newsData.id = document.forms['editNews']['id'].value;
-    newsData.topic = document.forms['editNews']['topic'].value;
-    newsData.content = document.forms['editNews']['content'].value;
-    newsData.date = document.forms['editNews']['date'].value;
+    newsData.post_id = document.forms['editNews']['id'].value;
+    newsData.post_title = document.forms['editNews']['topic'].value;
+    newsData.post_content = document.forms['editNews']['content'].value;
+    newsData.post_date = document.forms['editNews']['date'].value;
     newsData.expdate = document.forms['editNews']['expdate'].value;
     
     let ajax = new XMLHttpRequest();
     ajax.onload = function(){
         let data = JSON.parse(this.responseText);
         if (data.hasOwnProperty('success')){
-            window.location.href = "admin.php?type=successmsg=News edited"
+            window.location.href = "../admin/index.php?type=successmsg=News edited"
         } else {
             // showMessage('error', data.error);
         }

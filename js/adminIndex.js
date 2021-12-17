@@ -107,9 +107,11 @@ function deleteNews(id){
     ajax.onload = function(){
         data = JSON.parse(this.responseText);
         console.log(data);
-        // let liToDelete = document.querySelector(`[data-newsid="${id}"]`)
-        // let parent = liToDelete.parentElement;
-        // parent.removeChild(liToDelete);
+        // tästä eteenpäin
+        
+        let liToDelete = document.querySelector(`[data-id="${id}"]`)
+        let parent = liToDelete.parentElement;
+        parent.removeChild(liToDelete);
     }
     ajax.open("GET", "../backend/deleteNews.php?id=" + id);
     ajax.send();
