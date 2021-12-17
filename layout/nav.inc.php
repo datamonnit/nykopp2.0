@@ -20,7 +20,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="newpoll.php">Videos</a>
+          <a class="nav-link" href="videos.php">Videos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="poems.php">Essays & poems</a>

@@ -17,7 +17,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Videos</a>
+          <a class="nav-link" href="./manageVideos.php">Videos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./poemResult.php">Poems</a>
