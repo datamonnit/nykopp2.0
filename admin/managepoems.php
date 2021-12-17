@@ -4,6 +4,7 @@
 <div class="container">
     <h1>Manage poems</h1>
 </div>
+
 <div class="container">
     <div class="row">
         <div class="col">
@@ -29,7 +30,7 @@
         <h2>Poems</h2>
     <ul id="poemsUl" class="list-group">
     </ul>
-
+    <a href="../showPoem.php" class = "btn btn-primary">Poems </a>
     </div>
     </div>
     </div>
