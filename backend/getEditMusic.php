@@ -1,20 +1,22 @@
-<?php 
-/* getAdmins.php
-  Returns all admin users as JSON
-*/
+<?php
+// getEditMusic.php returns the music files to json
 session_start();
 
 include_once 'pdo-connect.php';
+
+
   
 try {
-    $stmt = $conn->prepare("SELECT id, username, email FROM users");
-    
+    $stmt = $conn->prepare("SELECT mus_id, mus_title, mus_file, mus_desc FROM music");
+    $stmt->bindParam(':mus_id', $mus_id);
+
+
   if ($stmt->execute() == false) {
     $data = array(
         'error' => 'Error occured'
     );
   } else {
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
     $data = $result;
   }
 } catch (PDOException $e) {
@@ -26,5 +28,3 @@ try {
 header("Content-Type: application/json;charset=utf-8");
 echo json_encode($data);
 ?>
-
-

@@ -39,6 +39,9 @@
         <li class="nav-item">
           <a class="nav-link" href="adminRegister.php">Users</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="manageAdmin.php">manage admins</a>
+        </li>
       </ul>
     </div>
   </div>

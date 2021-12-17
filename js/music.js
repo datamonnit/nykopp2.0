@@ -49,18 +49,14 @@ function createMusicLi(targetUl, musId, musTitle, musFile) {
     typeAttribute.value = "audio/mpeg";
     audioEl.setAttributeNode(typeAttribute);
     
+    // audio controls
     const controlsAttribute = document.createAttribute('controls');
     audioEl.setAttributeNode(controlsAttribute);
-
-    // audio
-    // const musicFile = document.createElement('name');
-    // const musicFileAudio = document.createTextNode(musFile);
-    // musicFile.appendChild(musicFileAudio);
 
 
     newLi.appendChild(musicTitle);
     newLi.appendChild(audioEl);
-    // newLi.appendChild(musicFileAudio);
+    
 
     targetUl.appendChild(newLi);
 }
