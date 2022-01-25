@@ -1,3 +1,14 @@
+/* 
+getIndexData.js
+
+JS for index-page
+
+Get data for index.php such as:
+ - news
+ - ...
+
+*/
+
 window.addEventListener('load', getNews);
 document.getElementById('newsUl');
 
