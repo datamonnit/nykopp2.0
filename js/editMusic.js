@@ -1,3 +1,13 @@
+/* 
+
+editMusic.js
+
+JS for adminMusic.php
+
+Last edit: 2022-01-25
+
+*/
+
 // get id from queryString
 window.addEventListener('load', getMusic);
 document.getElementById('musicUl').addEventListener('click', openMusic);
@@ -17,25 +27,36 @@ function showMusic(data){
     const ul = document.getElementById("musicUl");
 
     data.forEach(music => {
-     createMusicLi(ul, music.mus_id, music.mus_title)
+     createMusicLi(ul, music.mus_id, music.mus_title, music.mus_file, music.mus_desc)
    });
 
 }
 
 
-function createMusicLi(targetUl, musId, musTitle){
+function createMusicLi(targetUl, musId, musTitle, musFile, musDesc){
 
+    // li for song
     const newLi = document.createElement('li');
     newLi.classList.add('list-group-item');
     newLi.dataset.musId = musId;
 
+    // button group for buttons
+    const buttonGroup = document.createElement('div');
+    buttonGroup.setAttribute('role','group');
+    buttonGroup.setAttribute('aria-label','Music edit buttons')
+    buttonGroup.classList.add('btn-group');
+    buttonGroup.classList.add('float-end');
+    
+    // delete button
     const newDeleteBtn = document.createElement('button');
     newDeleteBtn.classList.add('btn');
     newDeleteBtn.classList.add('btn-danger');
+ 
     newDeleteBtn.dataset.action = 'delete';
     const DeleteText = document.createTextNode('delete music');
     newDeleteBtn.appendChild(DeleteText);
 
+    // edit button
     const newEditBtn = document.createElement('button');
     newEditBtn.classList.add('btn');
     newEditBtn.classList.add('btn-primary');
@@ -43,19 +64,41 @@ function createMusicLi(targetUl, musId, musTitle){
     const EditText = document.createTextNode('edit music');
     newEditBtn.appendChild(EditText);
 
+    buttonGroup.appendChild(newDeleteBtn);
+    buttonGroup.appendChild(newEditBtn);
+
+    newLi.appendChild(buttonGroup);
+
     const liText = document.createTextNode(musTitle);
-    newLi.appendChild(liText);
+    const musicDescriptionText = document.createTextNode(musDesc)
+    const musicHeader = document.createElement('h3')
+    const musicDescription = document.createElement('p')
 
-    newLi.appendChild(newDeleteBtn);
+    musicHeader.appendChild(liText);
+    musicDescription.appendChild(musicDescriptionText)
+    newLi.appendChild(musicHeader);
+    newLi.appendChild(musicDescription)
 
-    newLi.appendChild(newEditBtn);
+    // audio element
+    const audioEl = document.createElement('audio');
+    audioEl.src = `./music/${musFile}`;
+    
+    // audio - type
+    const typeAttribute = document.createAttribute('type');
+    typeAttribute.value = "audio/mpeg";
+    audioEl.setAttributeNode(typeAttribute);
+    
+    // audio controls
+    const controlsAttribute = document.createAttribute('controls');
+    audioEl.setAttributeNode(controlsAttribute);
+
+    newLi.appendChild(audioEl);
 
     targetUl.appendChild(newLi);
 }
 
 function openMusic(event) {
 
-    console.log(event.target.dataset);  
     const action = event.target.dataset.action;
     if (action == 'delete') {
       let musId = event.target.parentElement.dataset.musId;
@@ -84,8 +127,8 @@ function deleteMusic(id){
   }
 
   function editMusic(id) {
-    alert('edit ' + id);
-    window.location.href = "../admin/edit.php?id=" + id;
+    
+    window.location.href = "../admin/editMusic.php?id=" + id;
 
   }
     

@@ -1,11 +1,14 @@
 <?php 
-// if (!isset($_SESSION['logged_in'])){
-//   header('Location: ../index.php');
-//   die();
-// }
+
+if (!isset($_SESSION['logged_in'])){
+  header('Location: ../index.php');
+  die();
+}
+
+include_once '../layout/top.inc.php'; 
+include_once '../layout/admin-nav.inc.php'; 
+
 ?>
-<?php include_once '../layout/top.inc.php'; ?>
-<?php include_once '../layout/nav.inc.php'; ?>
 
 <div class="container">
   <form name="createnews">

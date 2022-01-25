@@ -1,13 +1,13 @@
 <?php
 include_once '../layout/top.inc.php';
-include_once '../layout/nav.inc.php';
+include_once '../layout/admin-nav.inc.php';
 ?>
 
 
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2>poista musiikkia</h2>
+            <h2>Manage music</h2>
             <ul id="musicUl" class="form-group">
                 
             </ul>

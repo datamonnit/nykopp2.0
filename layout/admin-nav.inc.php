@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Nykopp</a>
+    <a class="navbar-brand" href="#">Nykopp Manager</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,19 +8,16 @@
     <div class="collapse navbar-collapse" id="navbarColor03">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="index.php">Admin index
+          <a class="nav-link active" href="index.php">Admin home
             <span class="visually-hidden">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="manageMusic.php">manage Music</a>
+          <a class="nav-link" href="manageMusic.php">Music</a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link" href="./manageVideos.php">Videos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./poemResult.php">Poems</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./managepoems.php">Essays & poems</a>
@@ -31,18 +28,9 @@
         <li class="nav-item">
           <a class="nav-link" href="manageAdmin.php">Users</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="logout.php">Logout</a>
-        <li class="nav-item">
-          <a class="nav-link" href="createNews.php">Create news</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="adminRegister.php">Users</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="manageAdmin.php">manage admins</a>
-        </li>
       </ul>
+      <span class="navbar-text">Logged in as <?php echo $_SESSION['username']; ?>&nbsp;</span>
+        <a class="btn btn-outline-secondary" href="logout.php">Logout</a>
     </div>
   </div>
 </nav>
