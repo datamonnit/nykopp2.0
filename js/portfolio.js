@@ -43,7 +43,7 @@ function showPortfolio(){
 
 function openCategory(event){
     console.log(event.target.dataset.imagecategory);
-    // window.location.href = "portfolio.php?category=" + event.target.dataset.imagecategory;
+    window.location.href = "portfolio.php?category=" + event.target.dataset.imagecategory;
     const ul = document.getElementById("imagesUl");
     ul.innerHTML = "";
 
