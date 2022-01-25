@@ -33,6 +33,7 @@ function createAdminLi(targetUl, userId, userName){
   const newDeleteBtn = document.createElement('button');
   newDeleteBtn.classList.add('btn');
   newDeleteBtn.classList.add('btn-danger');
+  newDeleteBtn.classList.add('float-end');
   newDeleteBtn.dataset.action = 'delete';
   const deleteText = document.createTextNode('delete admin');
   newDeleteBtn.appendChild(deleteText);

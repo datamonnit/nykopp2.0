@@ -1,10 +1,10 @@
 <?php include_once '../layout/top.inc.php';?>
-<?php include_once '../layout/nav.inc.php'; ?>    
+<?php include_once '../layout/admin-nav.inc.php'; ?>    
     <div class="container">
       <div class="col">
         <form name="editMusic">
           <fieldset>
-            <h3>editointi</h3>
+            <h3>Edit Music</h3>
             <div class="form-group">
             <input type="hidden" name="id">   
             <label for="title">musiikin otsikko</label>
@@ -15,7 +15,7 @@
             <input name="desc" type="text" class="form-control" placeholder="desc">
             </li>
           </fieldset>
-          <button type="submit" class="btn btn-primary">tallenna muutokset</button>  
+          <button type="submit" class="btn btn-primary">Save changes</button>  
         </div>  
     </div>
 </div>

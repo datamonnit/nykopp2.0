@@ -1,35 +1,22 @@
 <?php include_once '../layout/top.inc.php'; ?>
-<?php include_once '../layout/nav.inc.php'; ?>
+<?php include_once '../layout/admin-nav.inc.php'; ?>
 
-<?php
-
-/* 
-TODO:
-1. uutisten lista nimen perusteella
-    - mallia indexIndexData.js => manageNews.js
-    - backend valmiina getNews.php
-    0 elementti, johon uutislista haetaan
-
-2. uutisen poistaminen
-    - nappi uutisen poistamiselle
-    - backendi uutisen poitamiselle => deleteNews.php
-
-3. uutisen editointi
-    - nappi uutisen editoimiselle
-    - editointisivu osittain valmis (editnews.php)
-    - backend-tiedostot sivun editointiin => 
-        getNewsData.php
-        saveNewsData.php
-
-*/
-
-?>
-
-    <ul id="newsUl" class="list-group">
-        <li class="list-group">
-
-        </li>
-    </ul>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Manage news</h1>
+            <a href="createNews.php" class="btn btn-primary">Create news</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <ul id="newsUl" class="list-group">
+                <li class="list-group"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
 
 <!-- <script src="../js/getIndexData.js"></script> -->
 <script src="../js/adminIndex.js"></script>
