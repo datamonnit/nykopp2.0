@@ -10,7 +10,13 @@ function getPortfolio(){
     console.log('Haetaan data');
     let ajax = new XMLHttpRequest();
     // Haetaan kuvat
-    
+    ajax.onload = function(){
+        data = JSON.parse(this.responseText);
+        showPortfolio();
+    }
+    ajax.open("GET", "backend/getImages.php");
+    ajax.send();
+
 
     // Haetaan kategoriat
     ajax.onload = function(){
