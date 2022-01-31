@@ -9,11 +9,15 @@ let data = null;
 function getPortfolio(){
     console.log('Haetaan data');
     let ajax = new XMLHttpRequest();
+    // Haetaan kuvat
+    
+
+    // Haetaan kategoriat
     ajax.onload = function(){
         data = JSON.parse(this.responseText);
         showPortfolio();
     }
-    ajax.open("GET", "backend/getPortfolio.php");
+    ajax.open("GET", "backend/getCategories.php");
     ajax.send();
 }
 
@@ -36,13 +40,21 @@ function showPortfolio(){
 
         const liText = document.createTextNode(category.name);
         newLi.appendChild(liText);
+        newLi.dataset.categoryId = category.id
 
         ul.appendChild(newLi);
     })
 }
-
+/* 
+Ladataan kategorian mukaiset teokset
+*/
 function openCategory(event){
     console.log(event.target.dataset.imagecategory);
+    const categoryId = event.target.dataset.categoryId;
+
+    // Hae backendistä tämän categorian kuvat
+
+
     // window.location.href = "portfolio.php?category=" + event.target.dataset.imagecategory;
     const ul = document.getElementById("imagesUl");
     ul.innerHTML = "";
