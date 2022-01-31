@@ -3,3 +3,4 @@ config.env.php
 music/*
 new_images/*
 node_modules/*
+config.env.template.php
