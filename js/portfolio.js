@@ -96,4 +96,8 @@ function openImages(event){
     window.location.href = "portfolio.php?image=" + event.target.dataset.imagename;
 }
 
-function backToCategories(){}
+function backToCategories(){
+    document.getElementById('imagesUl').classList.remove('d-none');
+
+    document.getElementById('link-back').classList.remove('d-none');
+}

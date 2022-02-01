@@ -13,26 +13,24 @@
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <div class="sidebar">
-    <ul id="portfolioUl" class="list-group" aria-labelledby="list">
-      <li class="list-group-item">
-        <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample2" role="button" aria-controls="offcanvasBottom">
-          <svg class="bi me-2" width="12" height="12"><use xlink:href="#table"/></svg>
-          Orders
-        </a>
-      </li>
-    </ul>
+    <div class="sidebar">    
+
+      <ul id="portfolioUl" class="list-group" aria-labelledby="list"></ul>
+
+      <a id="link-back" class="btn btn-secondary d-none" href="">Back</a>
+      <ul id="imagesUl" class="list-group" aria-labelledby="list"></ul>
     </div>
   </div>
 </div>
 
 
-<div class="offcanvas offcanvas-bottom" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel2">
+<!-- <div class="offcanvas offcanvas-bottom" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel2">
   <div class="offcanvas-header">
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     <div class="bottombar">
+      <a id="link-back" class="btn btn-secondary d-none" href="">Back</a>
     <ul id="imagesUl" class="list-group" aria-labelledby="list">
       <li class="list-group-item">
         <a href="#" class="nav-link link-dark">
@@ -43,7 +41,7 @@
     </ul>
     </div>
   </div>
-</div>
+</div> -->
 
 <script src="js/portfolio.js"></script>
 <script src="js/common.js"></script>
