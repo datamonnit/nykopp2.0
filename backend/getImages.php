@@ -3,7 +3,7 @@
 include_once 'pdo-connect.php';
 
 try {
-    $stmt = $conn->prepare("SELECT id, name, dzi_file, dzi, category, size, technic, year, filelocation, sort , categoryId FROM images_uusi");
+    $stmt = $conn->prepare("SELECT id, name, dzi_file, dzi, category, size, technic, year, filelocation, sort , categoryid FROM images_uusi");
 
     if ( $stmt->execute() == false){
         $data = array(

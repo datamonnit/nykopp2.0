@@ -79,7 +79,7 @@ function openCategory(event){
         return image.categoryid == categoryId
     })
 
-    images.forEach(images_uusi => {
+    catImages.forEach(images_uusi => {
         const newLi = document.createElement('li');
         newLi.classList.add('list-group-item');
         newLi.dataset.imagename = images_uusi.name;
@@ -96,8 +96,10 @@ function openImages(event){
     window.location.href = "portfolio.php?image=" + event.target.dataset.imagename;
 }
 
-function backToCategories(){
-    document.getElementById('imagesUl').classList.remove('d-none');
+function backToCategories(event){
+    event.preventDefault();
+    document.getElementById('portfolioUl').classList.remove('d-none');
+    document.getElementById('imagesUl').classList.add('d-none');
 
     document.getElementById('link-back').classList.remove('d-none');
 }
