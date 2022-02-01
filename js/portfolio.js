@@ -4,27 +4,28 @@ window.addEventListener('load', getPortfolio);
 document.getElementById('portfolioUl').addEventListener('click', openCategory);
 document.getElementById('imagesUl').addEventListener('click', openImages);
 
-let data = null;
+document.getElementById('link-back').addEventListener('click', backToCategories);
+
+let categories = null;
+let images = null;
 
 function getPortfolio(){
     console.log('Haetaan data');
     let ajax = new XMLHttpRequest();
-    // Haetaan kuvat
-    ajax.onload = function(){
-        data = JSON.parse(this.responseText);
-        showPortfolio();
-    }
-    ajax.open("GET", "backend/getImages.php");
-    ajax.send();
-
-
     // Haetaan kategoriat
     ajax.onload = function(){
-        data = JSON.parse(this.responseText);
-        showPortfolio();
+        categories = JSON.parse(this.responseText);
+        showCategories();
     }
     ajax.open("GET", "backend/getCategories.php");
     ajax.send();
+    let ajax2 = new XMLHttpRequest();
+    // Haetaan kuvat
+    ajax2.onload = function(){
+        images = JSON.parse(this.responseText);
+    }
+    ajax2.open("GET", "backend/getImages.php");
+    ajax2.send();
 }
 
 /* <li class="list-group-item">
@@ -33,12 +34,12 @@ function getPortfolio(){
           Orders
         </a>
     </li> */
-function showPortfolio(){
+function showCategories(){
 
     const ul = document.getElementById("portfolioUl");
     ul.innerHTML = "";
 
-    data.forEach(category => {
+    categories.forEach(category => {
 
         const newLi = document.createElement('li');
         newLi.classList.add('list-group-item');
@@ -46,7 +47,7 @@ function showPortfolio(){
 
         const liText = document.createTextNode(category.name);
         newLi.appendChild(liText);
-        newLi.dataset.categoryId = category.id
+        newLi.dataset.categoryid = category.id
 
         ul.appendChild(newLi);
     })
@@ -56,7 +57,16 @@ Ladataan kategorian mukaiset teokset
 */
 function openCategory(event){
     console.log(event.target.dataset.imagecategory);
-    const categoryId = event.target.dataset.categoryId;
+
+    console.log(event.target.dataset.categoryid);
+
+    document.getElementById('portfolioUl').classList.add('d-none');
+
+    document.getElementById('imagesUl').classList.remove('d-none');
+
+    document.getElementById('link-back').classList.remove('d-none');
+    
+    const categoryId = event.target.dataset.categoryid;
 
     // Hae backendistä tämän categorian kuvat
 
@@ -65,7 +75,11 @@ function openCategory(event){
     const ul = document.getElementById("imagesUl");
     ul.innerHTML = "";
 
-    data.forEach(images_uusi => {
+    const catImages = images.filter( image => {
+        return image.categoryid == categoryId
+    })
+
+    images.forEach(images_uusi => {
         const newLi = document.createElement('li');
         newLi.classList.add('list-group-item');
         newLi.dataset.imagename = images_uusi.name;
@@ -81,3 +95,5 @@ function openImages(event){
     console.log(event.target.dataset.imagename);
     window.location.href = "portfolio.php?image=" + event.target.dataset.imagename;
 }
+
+function backToCategories(){}

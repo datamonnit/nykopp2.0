@@ -2,10 +2,8 @@
 
 include_once 'pdo-connect.php';
 
-// Parametrinä pitää vielä ottaa categoryid
-
 try {
-    $stmt = $conn->prepare("SELECT id, name, sort FROM category");
+    $stmt = $conn->prepare("SELECT id, name, dzi_file, dzi, category, size, technic, year, filelocation, sort , categoryId FROM images_uusi");
 
     if ( $stmt->execute() == false){
         $data = array(
