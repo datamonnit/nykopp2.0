@@ -1,5 +1,7 @@
 // portfolio-page js
 
+const imagePath = 'new_images/thumbs';
+
 window.addEventListener('load', getPortfolio);
 document.getElementById('portfolioUl').addEventListener('click', openCategory);
 document.getElementById('imagesUl').addEventListener('click', openImages);
@@ -83,6 +85,8 @@ function openCategory(event){
         const newLi = document.createElement('li');
         newLi.classList.add('list-group-item');
         newLi.dataset.imagename = images_uusi.name;
+        newLi.dataset.imageid = images_uusi.id;
+        newLi.dataset.imagepath = imagePath;
 
         const liText = document.createTextNode(images_uusi.name);
         newLi.appendChild(liText);
@@ -93,7 +97,10 @@ function openCategory(event){
 
 function openImages(event){
     console.log(event.target.dataset.imagename);
-    window.location.href = "portfolio.php?image=" + event.target.dataset.imagename;
+    console.log(event.target.dataset.imageid);
+    console.log(event.target.dataset.imagepath);
+    
+    // window.location.href = "portfolio.php?image=" + event.target.dataset.imagename;
 }
 
 function backToCategories(event){
