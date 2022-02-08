@@ -87,18 +87,39 @@ function openCategory(event){
         newLi.dataset.imagename = images_uusi.name;
         newLi.dataset.imageid = images_uusi.id;
         newLi.dataset.imagepath = imagePath;
+        newLi.dataset.imgfile = images_uusi.dzi_file;
 
+        // img-elementti
+        const newImg = document.createElement('img');
+        newImg.src = `${imagePath}/${images_uusi.dzi_file}.png`;
+        newLi.appendChild(newImg);
+
+        const newSpan = document.createElement('span');
         const liText = document.createTextNode(images_uusi.name);
-        newLi.appendChild(liText);
+        newSpan.appendChild(liText);
+
+        newLi.appendChild(newSpan);
 
         ul.appendChild(newLi);
     })
 }
 
 function openImages(event){
-    const fullPath = imagePath + '/' + event.target.dataset.imagename;
-    console.log(event.target.dataset.imagename);
-    console.log(event.target.dataset.imageid);
+
+    // Check if element has imageid
+    let liElement;
+    if (!event.target.dataset.imageid){
+        liElement = event.target.parentElement;
+    } else {
+        liElement = event.target;
+    }
+
+    // const li = event.target.parentElement;
+
+    const fullPath = imagePath + '/' + liElement.dataset.imgfile;
+
+    console.log(liElement.dataset.imagename);
+    console.log(liElement.dataset.imageid);
     console.log(fullPath);
     
 }
