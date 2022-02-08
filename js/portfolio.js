@@ -96,11 +96,11 @@ function openCategory(event){
 }
 
 function openImages(event){
+    const fullPath = imagePath + '/' + event.target.dataset.imagename;
     console.log(event.target.dataset.imagename);
     console.log(event.target.dataset.imageid);
-    console.log(event.target.dataset.imagepath);
+    console.log(fullPath);
     
-    // window.location.href = "portfolio.php?image=" + event.target.dataset.imagename;
 }
 
 function backToCategories(event){
