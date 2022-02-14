@@ -8,6 +8,12 @@
 </svg>
 </a>
 
+
+<div class="os-container">
+<div id="openseadragon1"></div>
+</div>
+
+
 <div class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -23,26 +29,16 @@
   </div>
 </div>
 
+<script src="openseadragon.min.js"></script>
+  <script type="text/javascript">
+    var viewer = OpenSeadragon({
+        id: "openseadragon1",
+        prefixUrl: "/nykopp2.0/images/",
+        tileSources: "new_images/dzi/Notre_Dame_Est_blue_80_io_web.dzi",
+        defaultZoomLevel: 0.8
+    });
 
-<!-- <div class="offcanvas offcanvas-bottom" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel2">
-  <div class="offcanvas-header">
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div class="bottombar">
-      <a id="link-back" class="btn btn-secondary d-none" href="">Back</a>
-    <ul id="imagesUl" class="list-group" aria-labelledby="list">
-      <li class="list-group-item">
-        <a href="#" class="nav-link link-dark">
-          <svg class="bi me-2" width="12" height="12"><use xlink:href="#table"/></svg>
-          Orders
-        </a>
-      </li>
-    </ul>
-    </div>
-  </div>
-</div> -->
-
+  </script>
 <script src="js/portfolio.js"></script>
 <script src="js/common.js"></script>
 <?php include_once 'layout/bottom.inc.php'; ?>

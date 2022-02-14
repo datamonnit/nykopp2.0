@@ -26,6 +26,20 @@
         display: grid;
         grid-template-rows: 200px 20px;
       }
+
+      .os-container {
+        width: 100%;
+        height: auto;
+      }
+
+      #openseadragon1 {
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100vw; height: 90vh;
+        z-index: 1;
+
+      }
       </style>
     <title>Lauri Nykopp</title>
   </head>
