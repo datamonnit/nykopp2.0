@@ -32,6 +32,7 @@
           <a class="nav-link" href="admin/">Admin</a>
         </li>
       </ul>
+      
     </div>
   </div>
 </nav>
