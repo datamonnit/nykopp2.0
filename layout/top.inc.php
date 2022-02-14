@@ -27,6 +27,12 @@
         grid-template-rows: 200px 20px;
       }
 
+      #togglePortfolio {
+        z-index: 100;
+        position: fixed;
+        top: 50vh;
+      }
+
       .os-container {
         width: 100%;
         height: auto;
