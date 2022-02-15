@@ -40,7 +40,7 @@
 
       #openseadragon1 {
         position: fixed;
-        top: 0px;
+        top: 5hv;
         left: 0;
         width: 100vw; height: 90vh;
         z-index: 1;

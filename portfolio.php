@@ -10,7 +10,8 @@
 
 
 <div class="os-container">
-<div id="openseadragon1"></div>
+<div id="textcontainer"></div>
+<div id="openseadragon1" style=""></div>
 </div>
 
 

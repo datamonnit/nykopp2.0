@@ -1,6 +1,7 @@
 // portfolio-page js
 
-const imagePath = 'new_images/thumbs';
+const thumbPath = 'new_images/thumbs';
+const dziPath = 'new_images/dzi';
 
 window.addEventListener('load', getPortfolio);
 document.getElementById('portfolioUl').addEventListener('click', openCategory);
@@ -86,18 +87,25 @@ function openCategory(event){
         newLi.classList.add('list-group-item');
         newLi.dataset.imagename = images_uusi.name;
         newLi.dataset.imageid = images_uusi.id;
-        newLi.dataset.imagepath = imagePath;
-        newLi.dataset.imgfile = images_uusi.dzi_file;
+        newLi.dataset.thumbPath = thumbPath;
+        newLi.dataset.dzi = images_uusi.dzi_file;
+        newLi.dataset.dzipath = dziPath;
+        newLi.dataset.imgsize = images_uusi.size;
+        newLi.dataset.imgyear = images_uusi.year;
+        newLi.dataset.imgtechnic = images_uusi.technic;
+        
 
         // img-elementti
         const newImg = document.createElement('img');
-        newImg.src = `${imagePath}/${images_uusi.dzi_file}.png`;
+        newImg.src = `${thumbPath}/${images_uusi.dzi_file}.png`;
         newLi.appendChild(newImg);
 
+        // span-elementti
         const newSpan = document.createElement('span');
         const liText = document.createTextNode(images_uusi.name);
         newSpan.appendChild(liText);
 
+        // li-elementti
         newLi.appendChild(newSpan);
 
         ul.appendChild(newLi);
@@ -114,14 +122,16 @@ function openImages(event){
         liElement = event.target;
     }
 
-    // const li = event.target.parentElement;
 
-    const fullPath = imagePath + '/' + liElement.dataset.imgfile;
-
+    const infoText = liElement.dataset.imagename + " / " + liElement.dataset.imgsize + " / " + liElement.dataset.imgyear + " / " + liElement.dataset.imgtechnic;
+    // const fullPath = imagePath + '/' + liElement.dataset.dzi;
+    const fullPath = `${dziPath}/${liElement.dataset.dzi}.dzi`;
     console.log(liElement.dataset.imagename);
     console.log(liElement.dataset.imageid);
     console.log(fullPath);
+    console.log(infoText);
     
+    vaihdadzi(fullPath, infoText, 0.5);
 }
 
 function backToCategories(event){
@@ -131,3 +141,33 @@ function backToCategories(event){
 
     document.getElementById('link-back').classList.remove('d-none');
 }
+
+function vaihdadzi(path,caption,t){
+    viewer.open(path)
+    viewer.addHandler('open', function() {
+        var targetZoom = 0.8;
+        var imageBounds = viewer.world.getItemAt(0).getBounds();
+        var viewportBounds = viewer.viewport.getBounds();
+        var imageAspect = imageBounds.width / imageBounds.height;
+        var viewportAspect = viewportBounds.width / viewportBounds.height;
+        var aspectFactor = imageAspect / viewportAspect;
+        var zoomFactor = (aspectFactor >= 1 ? 1 : aspectFactor) * targetZoom;
+        viewer.viewport.defaultZoomLevel = zoomFactor / imageBounds.width;
+        viewer.viewport.goHome(true);
+    });
+
+    var zoomLevel =  t;
+    viewer.viewport.zoomTo(zoomLevel);
+    document.getElementById("textcontainer").innerHTML = caption;
+    // document.getElementById("nonzoomableimage").style.display="none";
+    // document.getElementById("openseadragon1").style.display="block";
+    // document.getElementById("tiedot").style.display="block";
+  }
+
+  function vaihda(z,y){
+    document.getElementById("tiedot").innerHTML = y;
+    document.getElementById("nonzoomableimage").src=z;
+    document.getElementById("nonzoomableimage").style.display="block";
+    document.getElementById("openseadragon1").style.display="none";
+    document.getElementById("tiedot").style.display="block";
+  }
