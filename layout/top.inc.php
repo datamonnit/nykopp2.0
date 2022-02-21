@@ -43,6 +43,7 @@
         z-index: 101;
         position: fixed;
         top: 1hv;
+        text-align: center;
         background-color: rgba(255, 255, 255, 0.5);
       }
 

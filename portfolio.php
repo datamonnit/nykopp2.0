@@ -10,7 +10,7 @@
 
 
 <div id="os-container">
-  <div class="text-center" id="textcontainer" style=""></div>
+  <div id="textcontainer" style=""></div>
   <div id="openseadragon1"></div>
 </div>
 
