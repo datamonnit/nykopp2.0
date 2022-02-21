@@ -126,12 +126,14 @@ function openImages(event){
     console.log(liElement.dataset.imageid);
     console.log(fullPath);
 
-    vaihdadzi(fullPath,"sss", 0.5)
+    vaihdadzi(fullPath, liElement.dataset.imagename, 1)
 
    
     
 }
-
+/* 
+Back to Categories -button
+*/
 function backToCategories(event){
     event.preventDefault();
     document.getElementById('portfolioUl').classList.remove('d-none');
@@ -140,7 +142,7 @@ function backToCategories(event){
     document.getElementById('link-back').classList.remove('d-none');
 }
 
-function vaihdadzi(path,y,t){
+function vaihdadzi(path,caption,zoomLevel){
     viewer.open(path)
     viewer.addHandler('open', function() {
         var targetZoom = 0.8;
@@ -154,9 +156,8 @@ function vaihdadzi(path,y,t){
         viewer.viewport.goHome(true);
     });
 
-    var zoomLevel =  t;
     viewer.viewport.zoomTo(zoomLevel);
-    // document.getElementById("tiedot").innerHTML = y;
+    document.getElementById("caption").innerHTML = caption;
     // document.getElementById("nonzoomableimage").style.display="none";
     // document.getElementById("openseadragon1").style.display="block";
     // document.getElementById("tiedot").style.display="block";

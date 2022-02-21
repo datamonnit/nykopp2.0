@@ -13,9 +13,13 @@
   <div id="openseadragon1"></div>
 </div>
 
+<div id="caption" style="position: fixed; top: 50px; width: 100%; text-align: center; font-size: 2em; background-color: rgba(255,255,255,0.4)">Otsikko</div>
+
 <div class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" id="link-back" class="btn-secondary d-none" aria-label="Back">Back</button>
+
   </div>
   <div class="offcanvas-body">
     <div class="sidebar">    
@@ -39,6 +43,11 @@
       tileSources: "new_images/dzi/3_cannons_HIGH_F_io_web.dzi",
       defaultZoomLevel: 0.5
   });
+
+  vaihdadzi('new_images/dzi/3_cannons_HIGH_F_io_web.dzi','Custom otsikkoni',0.5)
+
 </script>
+
+
 
 <?php include_once 'layout/bottom.inc.php'; ?>
