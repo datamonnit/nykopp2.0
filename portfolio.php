@@ -9,7 +9,7 @@
 </a>
 
 
-<div class="os-container">
+<div id="os-container">
   <div class="d-flex align-content-center flex-wrap" id="textcontainer" style=""></div>
   <div id="openseadragon1"></div>
 </div>

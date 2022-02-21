@@ -38,6 +38,13 @@
         height: auto;
       }
 
+      #textcontainer {
+        z-index: 101;
+        position: fixed;
+        top: 1hv;
+        left: 50;
+      }
+
       #openseadragon1 {
         position: fixed;
         top: 5hv;
