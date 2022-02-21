@@ -39,10 +39,11 @@
       }
 
       #textcontainer {
+        width: 100%;
         z-index: 101;
         position: fixed;
         top: 1hv;
-        left: 50;
+        background-color: rgba(255, 255, 255, 0.5);
       }
 
       #openseadragon1 {
@@ -51,7 +52,6 @@
         left: 0;
         width: 100vw; height: 90vh;
         z-index: 1;
-
       }
       </style>
     <title>Lauri Nykopp</title>

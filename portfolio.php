@@ -10,7 +10,7 @@
 
 
 <div id="os-container">
-  <div class="d-flex align-content-center flex-wrap" id="textcontainer" style=""></div>
+  <div class="text-center" id="textcontainer" style=""></div>
   <div id="openseadragon1"></div>
 </div>
 
@@ -34,8 +34,8 @@
   <script type="text/javascript">
     var viewer = OpenSeadragon({
         id: "openseadragon1",
-        prefixUrl: "../nykopp2.0/images/",
-        tileSources: "../nykopp2.0/new_images/dzi/Notre_Dame_Est_blue_80_io_web.dzi",
+        prefixUrl: "./images/",
+        tileSources: "./new_images/dzi/Notre_Dame_Est_blue_80_io_web.dzi",
         defaultZoomLevel: 0.8
     });
 
