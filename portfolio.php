@@ -13,7 +13,12 @@
   <div id="openseadragon1"></div>
 </div>
 
-<div id="caption" style="position: fixed; top: 50px; width: 100%; text-align: center; font-size: 2em; background-color: rgba(255,255,255,0.4)">Otsikko</div>
+
+<div id="tool-wrapper">
+  <a class="btn btn-light" id="zoom-in"><i class="bi bi-zoom-in"></i></a>
+  <a class="btn btn-light" id="zoom-out"><i class="bi bi-zoom-out"></i></a>
+  <div id="caption" style="">Otsikko</div>
+</div>
 
 <div class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
@@ -39,11 +44,26 @@
 <script type="text/javascript">
   var viewer = OpenSeadragon({
       id: "openseadragon1",
-      prefixUrl: "/nykopp2.1/images/",
-      tileSources: "new_images/dzi/3_cannons_HIGH_F_io_web.dzi",
-      defaultZoomLevel: 0.5
-  });
+      prefixUrl: "./images/",
+      tileSources: "./new_images/dzi/3_cannons_HIGH_F_io_web.dzi",
+      defaultZoomLevel: 0,
+      zoomPerSecond: 0.2,
+      // showNavigator:  true,
+      
+      
+      // showNavigationControl: false,
+      // toolbar: "tool-wrapper",
+      zoomInButton: "zoom-out",
+      zoomOutButton: "zoom-in",
+      showHomeControl: false,
+      showFullPageControl: false,
+      // homeButton:     "home",
+      // fullPageButton: "full-page",
+      zoomPerClick: 1
 
+
+      // toolbar: "myToolbar"
+  });
   vaihdadzi('new_images/dzi/3_cannons_HIGH_F_io_web.dzi','Custom otsikkoni',0.5)
 
 </script>
