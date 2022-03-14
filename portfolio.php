@@ -14,6 +14,11 @@
   <div id="openseadragon1"></div>
 </div>
 
+<div id="tool-wrapper">
+  <a class="btn btn-light" id="zoom-in"><i class="bi bi-zoom-in"></i></a>
+  <a class="btn btn-light" id="zoom-out"><i class="bi bi-zoom-out"></i></a>
+  <div id="caption" style=""></div>
+</div>
 
 <div class="offcanvas offcanvas-start" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
@@ -31,15 +36,28 @@
 </div>
 
 <script src="openseadragon.min.js"></script>
+<script src="js/portfolio.js"></script>
+<script src="js/common.js"></script>
+
   <script type="text/javascript">
     var viewer = OpenSeadragon({
         id: "openseadragon1",
         prefixUrl: "./images/",
         tileSources: "./new_images/dzi/Notre_Dame_Est_blue_80_io_web.dzi",
-        defaultZoomLevel: 0.8
+        defaultZoomLevel: 0.8,
+        zoomPerSecond: 0.2,
+        // showNavigator: true,
+
+        zoomInButton: "zoom-in",
+        zoomOutButton: "zoom-out",
+        showHomecontrol: false,
+        showFullPageControl: false,
+        zoomPerClick: 1
+
     });
 
+    vaihdadzi('new_images/dzi/Notre_Dame_Est_blue_80_io_web.dzi','Custom otsikkoni',0.5)
+
   </script>
-<script src="js/portfolio.js"></script>
-<script src="js/common.js"></script>
+
 <?php include_once 'layout/bottom.inc.php'; ?>

@@ -28,6 +28,9 @@
         <li class="nav-item">
           <a class="nav-link" href="manageAdmin.php">Users</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="addImages.php">Add images</a>
+        </li>
       </ul>
       <span class="navbar-text">Logged in as <?php echo $_SESSION['username']; ?>&nbsp;</span>
         <a class="btn btn-outline-secondary" href="logout.php">Logout</a>
