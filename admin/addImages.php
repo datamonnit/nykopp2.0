@@ -22,7 +22,7 @@ include_once '../backend/pdo-connect.php';
                     </div>
                     <div class="form-group">
                         <label for="dzi" class="form-label mt-4">dzi file</label>
-                        <input name="dzi" type="dzi" class="form-control" id="dzi" placeholder="Enter dzi file">
+                        <input name="dzi" type="dzi" class="form-control" id="dzi_file" placeholder="Enter dzi file">
                     </div>
                     <div class="form-group">
                         <label for="category" class="form-label mt-4">Image category</label>
@@ -40,6 +40,7 @@ include_once '../backend/pdo-connect.php';
                         <label for="year" class="form-label mt-4">Image year</label>
                         <input name="year" type="year" class="form-control" id="year" placeholder="Enter image year"> 
                     </div>
+                    <button class="btn" type="submit">Tallenna</button>
                 </fieldset>
             </form>
         </div>
