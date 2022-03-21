@@ -7,6 +7,7 @@ if (!isset($_SESSION['logged_in'])) {
 
 include_once '../layout/bottom.inc.php';
 include_once '../backend/pdo-connect.php';
+include_once '../backend/createNewImage.php';
 ?>
 
 
@@ -46,3 +47,5 @@ include_once '../backend/pdo-connect.php';
         </div>
     </div>    
 </div>
+
+<script src="../js/addImages.js"></script>
