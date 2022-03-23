@@ -14,7 +14,7 @@ include_once '../backend/createNewImage.php';
 <div class="container">
     <div class="row">
         <div class="col">
-            <form name="register">
+            <form name="addimages">
                 <fieldset>
                     <legend>New image</legend>
                     <div class="form-group">
