@@ -1,5 +1,14 @@
 <?php
 
+$data = array();
+if (!isset($_POST['name']) || !isset($_POST['dzi_file']) || !isset($_POST['category']) || !isset($_POST['size']) || !isset($_POST['technic']) || !isset($_POST['year'])){
+    $data = array(
+        'error' => 'POST_dataa ei saatavilla'
+    );
+    echo json_encode($data);
+    die();
+}
+
 $name = $_POST['name'];
 $dzi_file = $_POST['dzi_file'];
 $category = $_POST['category'];
@@ -10,7 +19,8 @@ $year = $_POST['year'];
 include_once 'pdo-connect.php';
 
 try {
-    $stmt = $conn->prepare("INSERT INTO images_uusi (name, dzi_file, category, size, technic, year) VALUES (:name, :dzi_file, :category, :size, :technic, :year);");
+    $stmt = $conn->prepare("INSERT INTO images_uusi (name, dzi_file, category, size, technic, year)
+                            VALUES (:name, :dzi_file, :category, :size, :technic, :year);");
     $stmt->bindParam(':name', $name);
     $stmt->bindParam(':dzi_file', $dzi_file);
     $stmt->bindParam(':category', $category);
@@ -42,3 +52,4 @@ try {
     
     header("Content-type: application/json;charset=utf-8");    
     echo json_encode($data);
+    ?>
