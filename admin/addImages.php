@@ -1,9 +1,12 @@
-<?php include_once '../layout/top.inc.php'; ?>
-<?php include_once '../layout/nav.inc.php'; ?>
-<?
-if (!isset($_SESSION['logged_in'])) {
+<?php
+
+if (!isset($_SESSION['logged_in'])){
     header('Location: ../index.php');
-} 
+    die();
+  }
+
+include_once '../layout/top.inc.php';
+include_once '../layout/nav.inc.php';
 
 include_once '../layout/bottom.inc.php';
 include_once '../backend/pdo-connect.php';
