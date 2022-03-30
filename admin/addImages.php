@@ -10,9 +10,8 @@ include_once '../layout/admin-nav.inc.php';
 
 include_once '../layout/bottom.inc.php';
 include_once '../backend/pdo-connect.php';
-include_once '../backend/createNewImage.php';
-?>
 
+?>
 
 <div class="container">
     <div class="row">
@@ -25,13 +24,27 @@ include_once '../backend/createNewImage.php';
                         <input name="imgname" type="imgname" class="form-control" id="name" placeholder="Enter image name"> 
                     </div>
                     <div class="form-group">
-                        <label for="dzi" class="form-label mt-4">dzi file</label>
-                        <input name="dzi" type="dzi" class="form-control" id="dzi_file" placeholder="Enter dzi file">
+                        <label for="dzi_file" class="form-label mt-4">dzi file</label>
+                        <input name="dzi_file" type="dzi_file" class="form-control" id="dzi_file" placeholder="Enter dzi file">
                     </div>
-                    <div class="form-group">
+                    Is the image zoomable?
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="imgzoom" id="imgzoomyes" value="1">
+                    <label class="form-check-label" for="imgzoomyes">
+                        Yes
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="imgzoom" id="imgzoomno" value="0" checked>
+                    <label class="form-check-label" for="imgzoomno">
+                        No
+                    </label>
+                    </div>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <!-- <div class="form-group">
                         <label for="category" class="form-label mt-4">Image category</label>
                         <input name="category" type="category" class="form-control" id="category" placeholder="Enter image category"> 
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <label for="size" class="form-label mt-4">Image size</label>
                         <input name="imgsize" type="imgsize" class="form-control" id="size" placeholder="Enter image size"> 
