@@ -13,6 +13,7 @@ $name = $_POST['name'];
 $dzi_file = $_POST['dzi_file'];
 $dzi = $_POST['imgzoom'];
 $category = $_POST['category'];
+$categoryid = $_POST['categoryid'];
 $size = $_POST['size'];
 $technic = $_POST['technic'];
 $year = $_POST['year'];
@@ -20,12 +21,13 @@ $year = $_POST['year'];
 include_once 'pdo-connect.php';
 
 try {
-    $stmt = $conn->prepare("INSERT INTO images_uusi (name, dzi_file, dzi, category, size, technic, year)
+    $stmt = $conn->prepare("INSERT INTO images_uusi (name, dzi_file, dzi, categoryid, size, technic, year)
                             VALUES (:name, :dzi_file, :imgzoom, :category, :size, :technic, :year);");
     $stmt->bindParam(':name', $name);
     $stmt->bindParam(':dzi_file', $dzi_file);
     $stmt->bindParam(':imgzoom', $dzi);
     $stmt->bindParam(':category', $category);
+    // $stmt->bindParam(':categoryid', $categoryid);
     $stmt->bindParam(':size', $size);
     $stmt->bindParam(':technic', $technic);
     $stmt->bindParam(':year', $year);

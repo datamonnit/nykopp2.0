@@ -4,7 +4,7 @@ include_once 'pdo-connect.php';
 
 
 try {
-    $stmt = $conn->prepare("SELECT id, name, sort FROM category");
+    $stmt = $conn->prepare("SELECT id, name, sort FROM category ORDER BY name ASC");
 
     if ( $stmt->execute() == false){
         $data = array(

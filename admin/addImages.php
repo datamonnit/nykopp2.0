@@ -8,7 +8,6 @@ if (!isset($_SESSION['logged_in'])){
 
 include_once '../layout/admin-nav.inc.php';
 
-include_once '../layout/bottom.inc.php';
 include_once '../backend/pdo-connect.php';
 
 ?>
@@ -40,9 +39,8 @@ include_once '../backend/pdo-connect.php';
                         No
                     </label>
                     </div>
-                    <select id="category"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                        <option disabled selected>Category</option>
-                        <option value="25">All and the rest</option>
+                    <select id="selectCategory"class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option value="0" disabled selected>Category</option>
                     </select>
                     <!-- <div class="form-group">
                         <label for="category" class="form-label mt-4">Image category</label>
@@ -68,3 +66,4 @@ include_once '../backend/pdo-connect.php';
 </div>
 
 <script src="../js/addImages.js"></script>
+<?php include_once '../layout/bottom.inc.php';?>
